@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Maker</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="\Material\Level.png">
+</head>
+<body>
+    <div id="Main-Page">
+        <div id="Data-Input">
+            <span id="Card-Name">Name: </span> <input class="Input-Texts" id="Mons-Name" type="text" maxlength="23"> <br> <hr>
+            <span class="Input-Label">Card Type: </span>
+            <span id="Card-Type">Card Type: </span>
+            <input type="radio" name="Card-Type" class="Card-Type" value="1"> <span>Normal Monster</span>
+            <input type="radio" name="Card-Type" class="Card-Type" value="2"> <span>Effects Monster</span>
+            <br> <hr>
+            <span class="Input-Label">Attribute:
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="1"> <span>Light</span>
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="2"> <span>Dark</span>
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="3"> <span>Fire</span>
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="4"> <span>Water</span>
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="5"> <span>Earth</span>
+            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="6"> <span>Wind</span>
+            </span>
+            <br> <hr>
+            <span class="Input-Label">Level: </span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="1"> <span>1</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="2"> <span>2</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="3"> <span>3</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="4"> <span>4</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="5"> <span>5</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="6"> <span>6</span> <br>
+            <input type="radio" name="Input-Level" class="Input-Level" value="7"> <span>7</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="8"> <span>8</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="9"> <span>9</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="10"> <span>10</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="11"> <span>11</span>
+            <input type="radio" name="Input-Level" class="Input-Level" value="12"> <span>12</span>
+            <br> <hr>
+            <span class="Input-Label">Picture URL (1:1): </span> <input style="width: 300px" class="Input-Texts" id="Input-File" type="text" placeholder="Tạm thời không có chức năng chọn file"> <br> <hr>
+            <span class="Input-Label">Circulation: </span> <input class="Input-Texts" id="Input-Circulation" type="text"> <br> <hr>
+            <span class="Input-Label">Set ID: </span> <input class="Input-Texts" id="ID-0" type="text" maxlength="4"> <span>/</span> <input class="Input-Texts" id="ID-1" type="text" maxlength="4"> <br> <hr>
+            <span class="Input-Label">Type: </span> <input class="Input-Texts" id="Mons-Types" type="text" placeholder="exa: Tuner/Dragon/..."> <br> <hr>
+            <div id="Description">
+                <span class="Input-Label">Description: </span> <textarea name="" class="Input-Texts" id="Input-Description" cols="20" rows="5"></textarea>
+            </div>
+            <hr>
+            <span class="Input-Label">ATK / DEF: </span> <input class="Input-Texts" id="Mons-ATK" type="text" maxlength="4"> <span> / </span> <input class="Input-Texts" id="Mons-DEF" type="text" maxlength="4"> <br> <hr>
+            <span class="Input-Label">Creator: </span> <input class="Input-Texts" id="Input-Creator" type="text" placeholder="KAZUKI TAKAHASHI"> <br> <hr>
+            <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text" placeholder="2022"> <br> <hr>
+            <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text" value="22022003">
+            <button class="Result-Button" onclick="Generate()">Generate</button>
+            <button class="Result-Button" id="Save-Button" >Save PDF</button>
+        </div>
+        <div id="Result">
+            <div id="Main-Card">
+                <img class="Main-Card" src="\Material\Normal_Mons.jpg" alt="">
+            </div>
+            <div id="Re-Mons-Name-CSS">
+                <span id="Re-Mons-Name"></span>
+            </div>
+            <div id="Re-Mons-Attribute">
+                <img class="Re-Mons-Attribute" id="Attribute" src="\Material\Light.png" alt="">
+            </div>
+            <div id="Re-Mons-Level">
+                <img class="Level" id="Level-1" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-2" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-3" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-4" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-5" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-6" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-7" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-8" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-9" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-10" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-11" src="\Material\Level.png" alt="">
+                <img class="Level" id="Level-12" src="\Material\Level.png" alt="">
+            </div>
+            <span id="Re-Mons-ATK"></span> <span id="Re-Mons-DEF"></span>
+            <div id="Re-Mons-Types-CSS">
+                <span id="Re-Mons-Types"></span>
+            </div>
+            <span id="Re-Creator"></span>
+            <div id="Re-Series-CSS">
+                <span id="Re-Series"></span>
+            </div>
+            <div id="Re-Circulation-CSS">
+                <span id="Re-Circulation"></span>
+            </div>
+            <div id="Re-ID-CSS">
+                <span id="Re-ID"></span>
+            </div>
+            <div id="Re-Description-CSS">
+                <span id="Re-Description"></span>
+            </div>
+            <div id="Re-Images">
+                <img src="" alt="" class="Re-Images">
+            </div>
+        </div>
+        <div id="Final-Result">
+            <img src="" id="png-result" alt="">
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="\Libraries\jquery.js"></script>
+    <script src="\Libraries\printThis.js"></script>
+    <script> // Import bên kia éo chạy nên qua đây :)
+        $(document).ready(function(){
+            $('#Save-Button').click(function(){
+                $('#Result').printThis()
+            })
+        });
+    </script>
+</body>
+</html>

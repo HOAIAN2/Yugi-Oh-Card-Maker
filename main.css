@@ -1,0 +1,268 @@
+/* phần tử vector sẽ chỏ anchor point [max][max] còn lại [0][0] */
+/* Thêm with để tạo Box chp các phần tử cần display từ trái qua phải */
+#Main-Page
+{
+    display: flex;
+    /* justify-content: space-around; */
+}
+#Main-Card,.Main-Card
+{
+    position: absolute;
+    right: 50px;
+}
+#Data-Input
+{
+    width: 500px;
+    padding: 20px;
+    margin-left: 80px;
+    border: 1px solid #0099ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #0099ff;
+    position: absolute;
+}
+#Result
+{
+    width: 419px;
+    height: 610px;
+}
+.Final-Result
+{
+    position: relative;
+    bottom: 700px;
+    width: 419px;
+    height: 610px;
+}
+hr
+{
+    height: 1px;
+    background-color: #0099ff;
+    border: none;
+}
+#Description
+{
+    display: flex;
+}
+.Input-Texts
+{
+    width: 150px;
+    height: 24px;
+    border: 1px solid #0099ff;
+    border-radius: 2px;
+}
+.Result-Button
+{
+    width: 150px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #0099ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Result-Button:hover
+{
+    background-color: #0277c4;
+    box-shadow: 0px 0px 3px #0277c4;
+}
+#Save-Button
+{
+    width: 80px;
+}
+#Re-Mons-Name
+{
+    font-size: 28px;
+    font-weight: normal;
+    text-align: left;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+}
+#Re-Mons-Name-CSS
+{
+    position: absolute;
+    top: 42px;
+    right: 180px;
+    /* border: 2px solid red; */
+    width: 300px;
+}
+#Re-Creator
+{
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 588px;
+    right: 158px;
+    /* border: 2px solid red; */
+}
+#Re-Series-CSS
+{
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 589px;
+    right: 200px;
+    /* border: 2px solid red; */
+    width: 300px;
+}
+#Re-Circulation-CSS
+{
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 445px;
+    right: 180px;
+    /* border: 2px solid red; */
+    width: 300px;
+}
+#Re-ID-CSS
+{
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    top: 445px;
+    right: 150px;
+    /* border: 2px solid red; */
+}
+#Re-Description-CSS
+{
+    font-size: 12px;
+    position: absolute;
+    top: 485px;
+    right: 139px;
+    /* border: 2px solid red; */
+    width: 340px;
+    height: 70px;
+}
+#Re-Mons-ATK
+{
+    font-weight: bold;
+    position: absolute;
+    top: 562px;
+    right: 234px;
+}
+#Re-Mons-DEF
+{
+    font-weight: bold;
+    position: absolute;
+    top: 562px;
+    right: 145px;
+}
+.Re-Mons-Attribute
+{
+    position: absolute;
+    top: 38px;
+    right: 138px;
+    width: 40px;
+}
+#Re-Mons-Types
+{
+    text-align: left;
+    font-size: large;
+    font-weight: bold;
+}
+#Re-Mons-Types-CSS
+{
+    position: absolute;
+    top: 465px;
+    right: 180px;
+    /* border: 2px solid red; */
+    width: 300px;
+}
+.Re-Images
+{
+    position: absolute;
+    right: 152.5px;
+    top: 121px;
+    width: 315px; height: 315px;
+}
+.Level
+{
+    position: absolute;
+    top: 85px;
+    right: 142px;
+    width: 28px;
+}
+#Level-1
+{
+    position: absolute;
+    top: 85px;
+    right: 142px;
+    width: 28px;
+}
+#Level-2
+{
+    position: absolute;
+    top: 85px;
+    right: 170px;
+    width: 28px;
+}
+#Level-3
+{
+    position: absolute;
+    top: 85px;
+    right: 198px;
+    width: 28px;
+}
+#Level-4
+{
+    position: absolute;
+    top: 85px;
+    right: 226px;
+    width: 28px;
+}
+#Level-5
+{
+    position: absolute;
+    top: 85px;
+    right: 254px;
+    width: 28px;
+}
+#Level-6
+{
+    position: absolute;
+    top: 85px;
+    right: 282px;
+    width: 28px;
+}
+#Level-7
+{
+    position: absolute;
+    top: 85px;
+    right: 310px;
+    width: 28px;
+}
+#Level-8
+{
+    position: absolute;
+    top: 85px;
+    right: 338px;
+    width: 28px;
+}
+#Level-9
+{
+    position: absolute;
+    top: 85px;
+    right: 366px;
+    width: 28px;
+}
+#Level-10
+{
+    position: absolute;
+    top: 85px;
+    right: 394px;
+    width: 28px;
+}
+#Level-11
+{
+    position: absolute;
+    top: 85px;
+    right: 422px;
+    width: 28px;
+}
+#Level-12
+{
+    position: absolute;
+    top: 85px;
+    right: 450px;
+    width: 28px;
+}
