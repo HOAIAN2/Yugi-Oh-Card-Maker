@@ -55,48 +55,50 @@
             <button class="Result-Button" id="Save-Button" >Save PDF</button>
         </div>
         <div id="Result">
-            <div id="Main-Card">
+            <div id="Main-Card" style="width: 419px; height: 610px;">
                 <img class="Main-Card" src="\Material\Normal_Mons.jpg" alt="">
             </div>
-            <div id="Re-Mons-Name-CSS">
-                <span id="Re-Mons-Name"></span>
-            </div>
-            <div id="Re-Mons-Attribute">
-                <img class="Re-Mons-Attribute" id="Attribute" src="\Material\Light.png" alt="">
-            </div>
-            <div id="Re-Mons-Level">
-                <img class="Level" id="Level-1" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-2" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-3" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-4" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-5" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-6" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-7" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-8" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-9" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-10" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-11" src="\Material\Level.png" alt="">
-                <img class="Level" id="Level-12" src="\Material\Level.png" alt="">
-            </div>
-            <span id="Re-Mons-ATK"></span> <span id="Re-Mons-DEF"></span>
-            <div id="Re-Mons-Types-CSS">
-                <span style="font-weight: bold ; font-size: larger;">[</span> <span id="Re-Mons-Types"></span> <span style="font-weight: bold ; font-size: larger;">]</span>
-            </div>
-            <span id="Re-Creator"></span>
-            <div id="Re-Series-CSS">
-                <span id="Re-Series"></span>
-            </div>
-            <div id="Re-Circulation-CSS">
-                <span id="Re-Circulation"></span>
-            </div>
-            <div id="Re-ID-CSS">
-                <span id="Re-ID"></span>
-            </div>
-            <div id="Re-Description-CSS">
-                <span id="Re-Description"></span>
-            </div>
-            <div id="Re-Images">
-                <img src="" alt="" class="Re-Images">
+            <div id="Other-Contents" style="width: 419px; height: 610px;">
+                <div id="Re-Mons-Name-CSS">
+                    <span id="Re-Mons-Name"></span>
+                </div>
+                <div id="Re-Mons-Attribute">
+                    <img class="Re-Mons-Attribute" id="Attribute" src="\Material\Light.png" alt="">
+                </div>
+                <div id="Re-Mons-Level">
+                    <img class="Level" id="Level-1" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-2" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-3" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-4" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-5" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-6" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-7" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-8" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-9" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-10" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-11" src="\Material\Level.png" alt="">
+                    <img class="Level" id="Level-12" src="\Material\Level.png" alt="">
+                </div>
+                <span id="Re-Mons-ATK"></span> <span id="Re-Mons-DEF"></span>
+                <div id="Re-Mons-Types-CSS">
+                    <span style="font-weight: bold ; font-size: larger;">[</span> <span id="Re-Mons-Types"></span> <span style="font-weight: bold ; font-size: larger;">]</span>
+                </div>
+                <span id="Re-Creator"></span>
+                <div id="Re-Series-CSS">
+                    <span id="Re-Series"></span>
+                </div>
+                <div id="Re-Circulation-CSS">
+                    <span id="Re-Circulation"></span>
+                </div>
+                <div id="Re-ID-CSS">
+                    <span id="Re-ID"></span>
+                </div>
+                <div id="Re-Description-CSS">
+                    <span id="Re-Description"></span>
+                </div>
+                <div id="Re-Images">
+                    <img src="" alt="" class="Re-Images">
+                </div>
             </div>
         </div>
     </div>
@@ -106,7 +108,9 @@
     <script> // Import bên kia éo chạy nên qua đây :)
         $(document).ready(function(){
             $('#Save-Button').click(function(){
-                $('#Result').printThis()
+                $('#Result').printThis({
+                    printDelay: 500
+                })
             })
         });
     </script>

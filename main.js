@@ -115,7 +115,7 @@ function Generate()
     document.querySelector("#Re-Mons-ATK").textContent =  Mons_ATK;
     document.querySelector("#Re-Mons-DEF").textContent =  Mons_DEF;
     if((Year=="")&&(Creator=="")) document.querySelector("#Re-Creator").textContent = ""; // Check nếu User không nhập Year hoặc Creator
-    else document.querySelector("#Re-Creator").textContent = "@" + " " + Year + " "+ Creator;
+    else document.querySelector("#Re-Creator").innerHTML = "&copy;" + " " + Year + " "+ Creator;
     document.querySelector("#Re-Series").textContent = Series;
     document.querySelector("#Re-Circulation").textContent = Circulation;
     document.querySelector("#Re-ID").textContent = ID;

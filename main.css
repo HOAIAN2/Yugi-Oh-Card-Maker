@@ -1,5 +1,20 @@
 /* phần tử vector sẽ chỏ anchor point [max][max] còn lại [0][0] */
 /* Thêm with để tạo Box chp các phần tử cần display từ trái qua phải */
+@media print
+{
+    #Result
+    {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+    }
+    #Main-Card,.Main-Card
+    {
+        position: absolute;
+        top: 0.6%;
+        right: 50px;
+    }
+}
 @font-face
 {
     font-family: 'YuGiOh';
@@ -14,6 +29,12 @@
 {
     position: absolute;
     right: 50px;
+}
+#Other-Contents
+{
+    position: absolute;
+    top: -0.5px;
+    right: 0px;
 }
 #Data-Input
 {
@@ -88,7 +109,7 @@ hr
 #Re-Mons-Name-CSS
 {
     position: absolute;
-    top: 36px;
+    top: 38px;
     right: 174px;
     /* border: 2px solid red; */
     width: 310px;
@@ -115,10 +136,11 @@ hr
 }
 #Re-Circulation-CSS
 {
+    font-family: 'YuGiOh';
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
     position: absolute;
-    top: 445px;
+    top: 443px;
     right: 180px;
     /* border: 2px solid red; */
     width: 300px;
@@ -185,7 +207,7 @@ hr
 .Re-Images
 {
     position: absolute;
-    right: 152.5px;
+    right: 152px;
     top: 121px;
     width: 315px; height: 315px;
 }
