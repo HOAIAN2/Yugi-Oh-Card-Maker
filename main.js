@@ -81,10 +81,26 @@ function Mons_Typing() // Hàm đã nhắc ở dòng đầu
 }
 function Images() // Lấy ảnh 1x1 từ Internet ( CSS cho nó xuống 1:1 rồi)
 {
-    let Input_img = document.querySelector("#Input-File").value;
-    console.log(Input_img);
+    let Input_img_URL = document.querySelector("#Input-File-URL").value;
+    console.log(Input_img_URL);
     let Re_Images = document.querySelector(".Re-Images");
-    Re_Images.src = Input_img;
+    if(Input_img_URL != "") // Ưu tiên ảnh mạng
+    {
+        Re_Images.src = Input_img_URL;
+    }
+    else
+    {
+        const Input_File = document.querySelector('input[type=file]');
+        console.log(Input_File.file)
+        const reader = new FileReader()
+        reader.onload = function() {
+            const img = new Image()
+            img.src = reader.result
+            console.log(img.src) ;
+            document.querySelector(".Re-Images").src = img.src;
+        }
+        reader.readAsDataURL(Input_File.files[0]);
+    }
 }
 function Generate()
 {
