@@ -20,20 +20,13 @@
     width: 500px;
     padding: 20px;
     margin-left: 80px;
-    border: 1px solid #0099ff;
+    /* border: 1px solid #0099ff; */
     border-radius: 10px;
-    box-shadow: 0px 0px 3px #0099ff;
+    box-shadow: 0px 0px 5px #0099ff;
     position: absolute;
 }
 #Result
 {
-    width: 419px;
-    height: 610px;
-}
-.Final-Result
-{
-    position: relative;
-    bottom: 700px;
     width: 419px;
     height: 610px;
 }
@@ -53,6 +46,15 @@ hr
     height: 24px;
     border: 1px solid #0099ff;
     border-radius: 2px;
+}
+.Input-Texts:focus
+{
+    outline: #0099ff;
+    width: 150px;
+    height: 24px;
+    border: 1px solid #0099ff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px #0099ff;
 }
 .Result-Button
 {
@@ -107,7 +109,7 @@ hr
     font-size: 12px;
     position: absolute;
     top: 589px;
-    right: 200px;
+    right: 202px;
     /* border: 2px solid red; */
     width: 300px;
 }

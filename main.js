@@ -3,7 +3,7 @@ function Card_Type() // Hàm này return number để chạy "MONS-TYPES/EFFECTS
     let Mons_Type = 0;
     let Card_Type = document.querySelectorAll(".Card-Type");
     if (Card_Type[0].checked) Mons_Type = 0;
-    else Mons_Type = 1;
+    if (Card_Type[1].checked) Mons_Type = 1;
     console.log('Monster Type '+ Mons_Type);
     return Mons_Type;
 }
@@ -46,13 +46,13 @@ function Get_Monster_Level() // Hàm này viết hơi sida chút do lười nghi
     let Mons_Level = document.querySelectorAll(".Input-Level"); // Select all Class
     console.log(Mons_Level[1].value); // Test kết quả
     // console.log(Mons_Attribute[1]);
-    let Level_Index=0;
+    let Level_Index=-1;
     let i=0;
     for(i=0; i<12; i++)
     {
         if(Mons_Level[i].checked==true) Level_Index=i;
     }
-    console.log(Level_Index); // Test hàm thành công
+    console.log(Level_Index); // Log Level Monster, -1 là quái thú 0 sao
     let Re_Level = document.querySelectorAll(".Level");
     for(i=0; i<=Level_Index; i++)
     {
@@ -110,10 +110,12 @@ function Generate()
     let Circulation = document.querySelector("#Input-Circulation").value;
     let Description = document.querySelector("#Input-Description").value;
     let ID = document.querySelector("#ID-0").value +"-"+ document.querySelector("#ID-1").value;
+    if (ID =="-") ID=""; // Check nếu User không nhập ID
     document.querySelector("#Re-Mons-Name").textContent =  Mons_Name;
     document.querySelector("#Re-Mons-ATK").textContent =  Mons_ATK;
     document.querySelector("#Re-Mons-DEF").textContent =  Mons_DEF;
-    document.querySelector("#Re-Creator").textContent = "@"+" "+Year+" "+Creator;
+    if((Year=="")&&(Creator=="")) document.querySelector("#Re-Creator").textContent = ""; // Check nếu User không nhập Year hoặc Creator
+    else document.querySelector("#Re-Creator").textContent = "@" + " " + Year + " "+ Creator;
     document.querySelector("#Re-Series").textContent = Series;
     document.querySelector("#Re-Circulation").textContent = Circulation;
     document.querySelector("#Re-ID").textContent = ID;

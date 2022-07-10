@@ -13,7 +13,6 @@
         <div id="Data-Input">
             <span id="Card-Name">Name: </span> <input class="Input-Texts" id="Mons-Name" type="text" maxlength="23"> <br> <hr>
             <span class="Input-Label">Card Type: </span>
-            <span id="Card-Type">Card Type: </span>
             <input type="radio" name="Card-Type" class="Card-Type" value="0"> <span>Normal Monster</span>
             <input type="radio" name="Card-Type" class="Card-Type" value="1"> <span>Effects Monster</span>
             <br> <hr>
@@ -43,15 +42,15 @@
             <span class="Input-Label">Picture URL (1:1): </span> <input style="width: 300px" class="Input-Texts" id="Input-File" type="text" placeholder="Tạm thời không có chức năng chọn file"> <br> <hr>
             <span class="Input-Label">Circulation: </span> <input class="Input-Texts" id="Input-Circulation" type="text"> <br> <hr>
             <span class="Input-Label">Set ID: </span> <input class="Input-Texts" id="ID-0" type="text" maxlength="4"> <span>/</span> <input class="Input-Texts" id="ID-1" type="text" maxlength="4"> <br> <hr>
-            <span class="Input-Label">Type: </span> <input class="Input-Texts" id="Mons-Types" type="text" placeholder="exa: Tuner/Dragon/..."> <br> <hr>
+            <span class="Input-Label">Type: </span> <input class="Input-Texts" id="Mons-Types" type="text" placeholder="Tuner/Dragon/Warrior..."> <br> <hr>
             <div id="Description">
-                <span class="Input-Label">Description: </span> <textarea name="" class="Input-Texts" id="Input-Description" cols="20" rows="5"></textarea>
+                <span class="Input-Label">Description: </span> <textarea style="font-family:'Arial'" name="" class="Input-Texts" id="Input-Description" cols="20" rows="5"></textarea>
             </div>
             <hr>
             <span class="Input-Label">ATK / DEF: </span> <input class="Input-Texts" id="Mons-ATK" type="text" maxlength="4"> <span> / </span> <input class="Input-Texts" id="Mons-DEF" type="text" maxlength="4"> <br> <hr>
             <span class="Input-Label">Creator: </span> <input class="Input-Texts" id="Input-Creator" type="text" placeholder="KAZUKI TAKAHASHI"> <br> <hr>
             <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text" placeholder="2022"> <br> <hr>
-            <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text" value="22022003">
+            <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text" placeholder="22022003">
             <button class="Result-Button" onclick="Generate()">Generate</button>
             <button class="Result-Button" id="Save-Button" >Save PDF</button>
         </div>
@@ -99,9 +98,6 @@
             <div id="Re-Images">
                 <img src="" alt="" class="Re-Images">
             </div>
-        </div>
-        <div id="Final-Result">
-            <img src="" id="png-result" alt="">
         </div>
     </div>
     <script src="main.js"></script>
