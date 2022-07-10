@@ -77,7 +77,7 @@ function Mons_Typing() // Hàm đã nhắc ở dòng đầu
         Re_Mons_Types = ("[" + Mons_Types + "/EFFECTS]");
     }
     console.log(Re_Mons_Types);
-    document.querySelector("#Re-Mons-Types").innerHTML = Re_Mons_Types;
+    document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types;
 }
 function Images() // Lấy ảnh 1x1 từ Internet ( CSS cho nó xuống 1:1 rồi)
 {
@@ -89,13 +89,16 @@ function Images() // Lấy ảnh 1x1 từ Internet ( CSS cho nó xuống 1:1 r�
 function Generate()
 {
     let Re_Mons_Type = document.querySelector(".Main-Card");
-    if(Card_Type()==0)
-    {
-        Re_Mons_Type.src = "/Material/Normal_Mons.jpg" ;
-    }
-    else
-    {
-        Re_Mons_Type.src = "/Material/Effects_Mons.jpg" ;
+    switch (Card_Type()) {
+        case 0:
+            Re_Mons_Type.src = "/Material/Normal_Mons.jpg" ;
+            break;
+        case 1:
+            Re_Mons_Type.src = "/Material/Effects_Mons.jpg" ;
+            break;
+        default:
+            Re_Mons_Type.src = "/Material/Normal_Mons.jpg" ;
+            break;
     }
     // Nếu chỉ lấy DATA và in ra thì viết vào hàm này luôn
     let Mons_Name = document.querySelector("#Mons-Name").value;
@@ -107,14 +110,14 @@ function Generate()
     let Circulation = document.querySelector("#Input-Circulation").value;
     let Description = document.querySelector("#Input-Description").value;
     let ID = document.querySelector("#ID-0").value +"-"+ document.querySelector("#ID-1").value;
-    document.querySelector("#Re-Mons-Name").innerHTML =  Mons_Name;
-    document.querySelector("#Re-Mons-ATK").innerHTML =  Mons_ATK;
-    document.querySelector("#Re-Mons-DEF").innerHTML =  Mons_DEF;
-    document.querySelector("#Re-Creator").innerHTML = "@"+" "+Year+" "+Creator;
-    document.querySelector("#Re-Series").innerHTML = Series;
-    document.querySelector("#Re-Circulation").innerHTML = Circulation;
-    document.querySelector("#Re-ID").innerHTML = ID;
-    document.querySelector("#Re-Description").innerHTML = Description;
+    document.querySelector("#Re-Mons-Name").textContent =  Mons_Name;
+    document.querySelector("#Re-Mons-ATK").textContent =  Mons_ATK;
+    document.querySelector("#Re-Mons-DEF").textContent =  Mons_DEF;
+    document.querySelector("#Re-Creator").textContent = "@"+" "+Year+" "+Creator;
+    document.querySelector("#Re-Series").textContent = Series;
+    document.querySelector("#Re-Circulation").textContent = Circulation;
+    document.querySelector("#Re-ID").textContent = ID;
+    document.querySelector("#Re-Description").textContent = Description;
     Get_Monster_Attribute();
     Get_Monster_Level();
     Mons_Typing();
