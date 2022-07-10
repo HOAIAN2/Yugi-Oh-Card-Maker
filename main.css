@@ -1,5 +1,10 @@
 /* phần tử vector sẽ chỏ anchor point [max][max] còn lại [0][0] */
 /* Thêm with để tạo Box chp các phần tử cần display từ trái qua phải */
+@font-face
+{
+    font-family: 'YuGiOh';
+    src: url(/Font/MatrixFont.ttf);
+}
 #Main-Page
 {
     display: flex;
@@ -71,32 +76,34 @@ hr
 }
 #Re-Mons-Name
 {
-    font-size: 28px;
+    text-align: center;
+    font-family: 'YuGiOh';
+    font-size: 36px;
     font-weight: normal;
-    text-align: left;
     color: white;
     text-shadow: 0px 0px 2px white;
 }
 #Re-Mons-Name-CSS
 {
     position: absolute;
-    top: 42px;
-    right: 180px;
+    top: 36px;
+    right: 174px;
     /* border: 2px solid red; */
-    width: 300px;
+    width: 310px;
+    height: 40px;
 }
 #Re-Creator
 {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
     position: absolute;
     top: 588px;
-    right: 158px;
+    right: 140px;
     /* border: 2px solid red; */
 }
 #Re-Series-CSS
 {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
     position: absolute;
     top: 589px;
@@ -116,7 +123,7 @@ hr
 }
 #Re-ID-CSS
 {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 12px;
     position: absolute;
     top: 445px;
@@ -127,7 +134,7 @@ hr
 {
     font-size: 12px;
     position: absolute;
-    top: 485px;
+    top: 486px;
     right: 139px;
     /* border: 2px solid red; */
     width: 340px;
@@ -135,36 +142,41 @@ hr
 }
 #Re-Mons-ATK
 {
+    font-family: 'YuGiOh';
+    font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 562px;
+    top: 559px;
     right: 234px;
 }
 #Re-Mons-DEF
 {
+    font-family: 'YuGiOh';
+    font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 562px;
+    top: 559px;
     right: 145px;
 }
 .Re-Mons-Attribute
 {
     position: absolute;
-    top: 38px;
-    right: 138px;
+    top: 39px;
+    right: 135px;
     width: 40px;
 }
 #Re-Mons-Types
 {
+    font-family: 'YuGiOh';
     text-align: left;
-    font-size: large;
+    font-size: 22px;
     font-weight: bold;
 }
 #Re-Mons-Types-CSS
 {
     position: absolute;
-    top: 465px;
-    right: 180px;
+    top: 463px;
+    right: 183px;
     /* border: 2px solid red; */
     width: 300px;
 }

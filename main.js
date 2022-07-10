@@ -70,11 +70,11 @@ function Mons_Typing() // Hàm đã nhắc ở dòng đầu
     let Re_Mons_Types = document.querySelector("#Re-Mons-Types");
     if (Card_Type()==0)
     {
-        Re_Mons_Types = ("[" + Mons_Types + "/NORMAL]");
+        Re_Mons_Types = (Mons_Types + "/NORMAL");
     }
     else
     {
-        Re_Mons_Types = ("[" + Mons_Types + "/EFFECTS]");
+        Re_Mons_Types = (Mons_Types + "/EFFECTS");
     }
     console.log(Re_Mons_Types);
     document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types;
