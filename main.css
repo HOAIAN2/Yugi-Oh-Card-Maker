@@ -114,6 +114,13 @@ hr
 {
     background-color: #0277c4;
     box-shadow: 0px 0px 3px #0277c4;
+    animation-name: Hover-Button;
+    animation-duration: 300ms;
+}
+@keyframes Hover-Button
+{
+    from{background-color:#0099ff;}
+    to{background-color: #0277c4;}
 }
 #Save-Button
 {
