@@ -104,7 +104,7 @@ function Images() // Lấy ảnh 1x1 từ Internet ( CSS cho nó xuống 1:1 r�
 }
 function Generate()
 {
-    let Re_Mons_Type = document.querySelector(".Main-Card");
+    let Re_Mons_Type = document.querySelector("#Main-Card");
     switch (Card_Type()) {
         case 0:
             Re_Mons_Type.src = "/Material/Normal_Mons.jpg" ;
