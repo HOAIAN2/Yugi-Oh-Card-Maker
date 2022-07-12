@@ -1,24 +1,5 @@
 /* phần tử vector sẽ chỏ anchor point [max][max] còn lại [0][0] */
 /* Thêm with để tạo Box chp các phần tử cần display từ trái qua phải */
-@media print
-{
-    #Result
-    {
-        position: absolute;
-        top: 20%;
-        left: 35%;
-    }
-    #Main-Card
-    {
-        position: absolute;
-        top: 1.3%;
-        right: 50px;
-    }
-    body
-    {
-        -webkit-print-color-adjust: exact;
-    }
-}
 @font-face
 {
     font-family: 'YuGiOh';
