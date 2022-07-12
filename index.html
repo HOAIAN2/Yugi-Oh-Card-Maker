@@ -52,7 +52,7 @@
             <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text" placeholder="2022"> <br> <hr>
             <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text" placeholder="22022003">
             <button class="Result-Button" onclick="Generate()">Generate</button>
-            <button class="Result-Button" id="Save-Button" >Save PDF</button>
+            <button class="Result-Button" id="Save-Button" onclick="Save()">Save PDF</button>
         </div>
         <div id="Result">
             <img id="Main-Card" src="\Material\Normal_Mons.jpg" alt="">
@@ -101,16 +101,20 @@
         </div>
     </div>
     <script src="main.js"></script>
-    <script src="\Libraries\jquery.js"></script>
-    <script src="\Libraries\printThis.js"></script>
-    <script> // Import bên kia éo chạy nên qua đây :)
-        $(document).ready(function(){
-            $('#Save-Button').click(function(){
-                $('#Result').printThis({
-                    printDelay: 1000
-                })
-            })
-        });
+    <script src="\Libraries\html2canvas.min.js"></script>
+    <script src="\Libraries\FileSaver.min.js"></script>
+    <script>
+        function Save()
+        {
+            html2canvas(document.querySelector("#Result")).then(canvas => {
+            document.body.appendChild(canvas)
+            let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
+            let Last_Canvas = All_Canvas[All_Canvas.length-1];
+            Last_Canvas.toBlob(function(blob) {
+            saveAs(blob, "YuGi_Oh_Custom_Card.png");
+            });
+            });
+        }
     </script>
 </body>
 </html>

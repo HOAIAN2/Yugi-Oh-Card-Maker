@@ -31,12 +31,12 @@ body
 #Main-Card
 {
     position: absolute;
-    right: 100px;
 }
 #Other-Contents
 {
+    padding: 0px;
     position: absolute;
-    top: -0.5px;
+    top: -7.7px;
     right: 0px;
 }
 #Data-Input
@@ -55,6 +55,17 @@ body
 {
     width: 419px;
     height: 610px;
+    position: absolute;
+    right: 0px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+canvas
+{
+    position: absolute;
+    top: 700px;
+    right: 0px;
+    display: none;
 }
 hr
 {
@@ -143,7 +154,7 @@ hr
 {
     position: absolute;
     top: 38px;
-    right: 174px;
+    right: 74px;
     /* border: 2px solid red; */
     width: 310px;
     height: 40px;
@@ -154,7 +165,7 @@ hr
     font-size: 12px;
     position: absolute;
     top: 588px;
-    right: 140px;
+    right: 40px;
     /* border: 2px solid red; */
 }
 #Re-Series-CSS
@@ -163,7 +174,7 @@ hr
     font-size: 12px;
     position: absolute;
     top: 589px;
-    right: 202px;
+    right: 102px;
     /* border: 2px solid red; */
     width: 300px;
 }
@@ -174,7 +185,7 @@ hr
     font-size: 16px;
     position: absolute;
     top: 443px;
-    right: 180px;
+    right: 80px;
     /* border: 2px solid red; */
     width: 300px;
 }
@@ -184,7 +195,7 @@ hr
     font-size: 12px;
     position: absolute;
     top: 445px;
-    right: 150px;
+    right: 50px;
     /* border: 2px solid red; */
 }
 #Re-Description-CSS
@@ -192,7 +203,7 @@ hr
     font-size: 12px;
     position: absolute;
     top: 486px;
-    right: 139px;
+    right: 39px;
     /* border: 2px solid red; */
     width: 340px;
     height: 70px;
@@ -204,7 +215,7 @@ hr
     font-weight: bold;
     position: absolute;
     top: 559px;
-    right: 234px;
+    right: 134px;
 }
 #Re-Mons-DEF
 {
@@ -213,13 +224,13 @@ hr
     font-weight: bold;
     position: absolute;
     top: 559px;
-    right: 145px;
+    right: 45px;
 }
 .Re-Mons-Attribute
 {
     position: absolute;
     top: 39px;
-    right: 135px;
+    right: 35px;
     width: 40px;
 }
 #Re-Mons-Types
@@ -233,14 +244,14 @@ hr
 {
     position: absolute;
     top: 463px;
-    right: 183px;
+    right: 83px;
     /* border: 2px solid red; */
     width: 300px;
 }
 .Re-Images
 {
     position: absolute;
-    right: 152px;
+    right: 52px;
     top: 121px;
     width: 315px; height: 315px;
 }
@@ -248,90 +259,90 @@ hr
 {
     position: absolute;
     top: 85px;
-    right: 142px;
+    right: 42px;
     width: 28px;
 }
 #Level-1
 {
     position: absolute;
     top: 85px;
-    right: 142px;
+    right: 42px;
     width: 28px;
 }
 #Level-2
 {
     position: absolute;
     top: 85px;
-    right: 170px;
+    right: 70px;
     width: 28px;
 }
 #Level-3
 {
     position: absolute;
     top: 85px;
-    right: 198px;
+    right: 98px;
     width: 28px;
 }
 #Level-4
 {
     position: absolute;
     top: 85px;
-    right: 226px;
+    right: 126px;
     width: 28px;
 }
 #Level-5
 {
     position: absolute;
     top: 85px;
-    right: 254px;
+    right: 154px;
     width: 28px;
 }
 #Level-6
 {
     position: absolute;
     top: 85px;
-    right: 282px;
+    right: 182px;
     width: 28px;
 }
 #Level-7
 {
     position: absolute;
     top: 85px;
-    right: 310px;
+    right: 210px;
     width: 28px;
 }
 #Level-8
 {
     position: absolute;
     top: 85px;
-    right: 338px;
+    right: 238px;
     width: 28px;
 }
 #Level-9
 {
     position: absolute;
     top: 85px;
-    right: 366px;
+    right: 266px;
     width: 28px;
 }
 #Level-10
 {
     position: absolute;
     top: 85px;
-    right: 394px;
+    right: 294px;
     width: 28px;
 }
 #Level-11
 {
     position: absolute;
     top: 85px;
-    right: 422px;
+    right: 322px;
     width: 28px;
 }
 #Level-12
 {
     position: absolute;
     top: 85px;
-    right: 450px;
+    right: 350px;
     width: 28px;
 }
