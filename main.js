@@ -12,6 +12,7 @@ function Get_Monster_Attribute()
     let Mons_Attribute = document.querySelectorAll(".Input-Attribute"); // Select all Class
     let Re_Mons_Attribute = document.querySelector(".Re-Mons-Attribute");
     let Attribute_Index=0;
+    console.log('Monster Attribute ' + Attribute_Index)
     let i=0;
     for(i=0; i<6; i++)
     {
@@ -44,15 +45,13 @@ function Get_Monster_Attribute()
 function Get_Monster_Level() // Hàm này viết hơi sida chút do lười nghiên cứu CSS
 {
     let Mons_Level = document.querySelectorAll(".Input-Level"); // Select all Class
-    console.log(Mons_Level[1].value); // Test kết quả
-    // console.log(Mons_Attribute[1]);
     let Level_Index=-1;
     let i=0;
     for(i=0; i<12; i++)
     {
         if(Mons_Level[i].checked==true) Level_Index=i;
     }
-    console.log(Level_Index); // Log Level Monster, -1 là quái thú 0 sao
+    console.log('Monster Levrl ' + Level_Index); // Log Level Monster, -1 là quái thú 0 sao
     let Re_Level = document.querySelectorAll(".Level");
     for(i=0; i<=Level_Index; i++)
     {
@@ -66,7 +65,7 @@ function Get_Monster_Level() // Hàm này viết hơi sida chút do lười nghi
 function Mons_Typing() // Hàm đã nhắc ở dòng đầu
 {
     let Mons_Types = document.querySelector("#Mons-Types").value;
-    console.log(Mons_Types);
+    console.log('Monster Type' + Mons_Types);
     let Re_Mons_Types = document.querySelector("#Re-Mons-Types");
     if (Card_Type()==0)
     {
@@ -76,7 +75,7 @@ function Mons_Typing() // Hàm đã nhắc ở dòng đầu
     {
         Re_Mons_Types = (Mons_Types + "/EFFECTS");
     }
-    console.log(Re_Mons_Types);
+    console.log('Final Monster Type ' + Re_Mons_Types);
     document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types;
 }
 function Images() // Lấy ảnh 1x1 từ Internet ( CSS cho nó xuống 1:1 rồi)
