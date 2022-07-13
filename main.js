@@ -51,7 +51,7 @@ function Get_Monster_Level() // Hàm này viết hơi sida chút do lười nghi
     {
         if(Mons_Level[i].checked==true) Level_Index=i;
     }
-    console.log('Monster Levrl ' + Level_Index); // Log Level Monster, -1 là quái thú 0 sao
+    console.log('Monster Level ' + Level_Index); // Log Level Monster, -1 là quái thú 0 sao
     let Re_Level = document.querySelectorAll(".Level");
     for(i=0; i<=Level_Index; i++)
     {
@@ -65,7 +65,7 @@ function Get_Monster_Level() // Hàm này viết hơi sida chút do lười nghi
 function Mons_Typing() // Hàm đã nhắc ở dòng đầu
 {
     let Mons_Types = document.querySelector("#Mons-Types").value;
-    console.log('Monster Type' + Mons_Types);
+    console.log('Monster Type ' + Mons_Types);
     let Re_Mons_Types = document.querySelector("#Re-Mons-Types");
     if (Card_Type()==0)
     {
