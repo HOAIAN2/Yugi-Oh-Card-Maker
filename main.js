@@ -85,8 +85,8 @@ function Generate() {
     document.querySelector("#Re-Circulation").textContent = Circulation
     document.querySelector("#Re-ID").textContent = ID
     document.querySelector("#Re-Description").textContent = Description
-    Get_Monster_Attribute();
-    Get_Monster_Level();
-    Mons_Typing();
-    Images();
+    Get_Monster_Attribute()
+    Get_Monster_Level()
+    Mons_Typing()
+    Images()
 }
