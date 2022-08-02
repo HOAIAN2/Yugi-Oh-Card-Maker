@@ -8,8 +8,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
     Name.style.top = '32px'
-    ATK.style.top = '523px'
-    DEF.style.top = '523px'
+    ATK.style.top = '553px'
+    DEF.style.top = '553px'
     Type.style.top = '457px'
 }
 function Card_Type() {
