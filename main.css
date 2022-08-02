@@ -1,65 +1,64 @@
 /* phần tử vector sẽ chỏ anchor point [max][max] còn lại [0][0] */
 /* Thêm with để tạo Box chp các phần tử cần display từ trái qua phải */
-@font-face
-{
+@font-face {
     font-family: 'YuGiOh';
     src: url(/Font/MatrixFont.ttf);
 }
-body
-{
+
+body {
     background-color: whitesmoke;
 }
-#Main-Page
-{
+
+#Main-Page {
     height: 100vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#Data-Input
-{
+
+#Data-Input {
     background-color: white;
     width: 500px;
     padding: 20px;
-    /* border: 1px solid #0099ff; */
     border-radius: 10px;
     box-shadow: 0px 0px 5px #0099ff;
 }
-#Description
-{
+
+#Description {
     display: flex;
 }
-#ID-0,#ID-1
-{
+
+#ID-0,
+#ID-1 {
     width: 165px;
 }
-#Mons-Name
-{
+
+#Mons-Name {
     width: 350px;
 }
-#Input-Description
-{
+
+#Input-Description {
     width: 320px;
     height: 60px;
 }
-.Input-Texts
-{
+
+.Input-Texts {
     width: 150px;
     height: 24px;
     border: 1px solid #0099ff;
     border-radius: 2px;
 }
-.Input-Texts:hover
-{
+
+.Input-Texts:hover {
     width: 150px;
     height: 24px;
     border: 1px solid #0099ff;
     box-shadow: 0px 0px 3px #0099ff;
     border-radius: 2px;
 }
-.Input-Texts:focus
-{
+
+.Input-Texts:focus {
     outline: #0099ff;
     width: 150px;
     height: 24px;
@@ -67,8 +66,8 @@ body
     border-radius: 2px;
     box-shadow: 0px 0px 3px #0099ff;
 }
-.Result-Button
-{
+
+.Result-Button {
     width: 150px;
     height: 30px;
     border: none;
@@ -78,68 +77,72 @@ body
     font-weight: bold;
     cursor: pointer;
 }
-.Result-Button:hover
-{
+
+.Result-Button:hover {
     background-color: #0277c4;
     box-shadow: 0px 0px 3px #0277c4;
     animation-name: Hover-Button;
     animation-duration: 300ms;
 }
-@keyframes Hover-Button
-{
-    from{background-color:#0099ff;}
-    to{background-color: #0277c4;}
+
+@keyframes Hover-Button {
+    from {
+        background-color: #0099ff;
+    }
+
+    to {
+        background-color: #0277c4;
+    }
 }
-#Save-Button
-{
+
+#Save-Button {
     width: 80px;
 }
-#Result
-{
+#Result {
     width: 419px;
     height: 610px;
     position: relative;
     margin-top: 20px;
 }
-#Main-Card
-{
+
+#Main-Card {
     position: absolute;
 }
-#Other-Contents
-{
+
+#Other-Contents {
     position: absolute;
 }
-canvas
-{
+
+canvas {
     position: absolute;
     top: 700px;
     right: 0px;
     display: none;
 }
-hr
-{
+
+hr {
     height: 1px;
     background-color: #0099ff;
     border: none;
 }
-#Re-Mons-Name
-{
+
+#Re-Mons-Name {
     font-family: 'YuGiOh';
     font-size: 36px;
     font-weight: normal;
     color: white;
     text-shadow: 0px 0px 2px white;
 }
-#Re-Mons-Name-CSS
-{
+
+#Re-Mons-Name-CSS {
     position: absolute;
     top: 30px;
     right: 74px;
     width: 310px;
     height: 40px;
 }
-#Re-Creator
-{
+
+#Re-Creator {
     font-weight: normal;
     font-size: 12px;
     position: absolute;
@@ -147,8 +150,8 @@ hr
     right: 40px;
     /* border: 2px solid red; */
 }
-#Re-Series-CSS
-{
+
+#Re-Series-CSS {
     font-weight: normal;
     font-size: 12px;
     position: absolute;
@@ -157,185 +160,217 @@ hr
     /* border: 2px solid red; */
     width: 300px;
 }
-#Re-Circulation-CSS
-{
+
+#Re-Circulation-CSS {
     font-family: 'YuGiOh';
     font-weight: bold;
     font-size: 16px;
     position: absolute;
     top: 435px;
     right: 80px;
-    /* border: 2px solid red; */
     width: 300px;
 }
-#Re-ID-CSS
-{
+
+#Re-ID-CSS {
     font-weight: normal;
     font-size: 12px;
     position: absolute;
     top: 437px;
     right: 50px;
-    /* border: 2px solid red; */
 }
-#Re-Description-CSS
-{
+
+#Re-Description-CSS {
     font-size: 12px;
     position: absolute;
     top: 478px;
     right: 39px;
-    /* border: 2px solid red; */
     width: 340px;
     height: 70px;
 }
-.Replace
-{
+
+.Replace {
     font-family: 'YuGiOh';
     font-size: 20px;
     font-weight: bold;
 }
-.Re-ATK-CSS
-{
+
+.Re-ATK-CSS {
     position: absolute;
     width: 80px;
     top: 551px;
     right: 122px;
 }
-.Re-DEF-CSS
-{
+
+.Re-DEF-CSS {
     position: absolute;
     top: 551px;
     width: 80px;
     right: 33px;
 }
-#Re-Mons-ATK
-{
+
+#Re-Mons-ATK {
     font-family: 'YuGiOh';
     font-size: 20px;
     font-weight: bold;
 }
-#Re-Mons-DEF
-{
+
+#Re-Mons-DEF {
     font-family: 'YuGiOh';
     font-size: 20px;
     font-weight: bold;
 }
-.Re-Mons-Attribute
-{
+
+.Re-Mons-Attribute {
     position: absolute;
     top: 31px;
     right: 35px;
     width: 40px;
 }
-#Re-Mons-Types
-{
+
+#Re-Mons-Types {
     font-family: 'YuGiOh';
     text-align: left;
     font-size: 22px;
     font-weight: bold;
 }
-#Re-Mons-Types-CSS
-{
+
+#Re-Mons-Types-CSS {
     position: absolute;
     top: 454px;
     right: 83px;
     /* border: 2px solid red; */
     width: 300px;
 }
-.Re-Images
-{
+
+.Re-Images {
     position: absolute;
     right: 52px;
     top: 113px;
-    width: 315px; height: 315px;
+    width: 315px;
+    height: 315px;
 }
-.Level
-{
+
+.Level {
     position: absolute;
     top: 77px;
     right: 42px;
     width: 28px;
 }
-#Level-1
-{
+
+#Level-1 {
     position: absolute;
     top: 77px;
     right: 42px;
     width: 28px;
 }
-#Level-2
-{
+
+#Level-2 {
     position: absolute;
     top: 77px;
     right: 70px;
     width: 28px;
 }
-#Level-3
-{
+
+#Level-3 {
     position: absolute;
     top: 77px;
     right: 98px;
     width: 28px;
 }
-#Level-4
-{
+
+#Level-4 {
     position: absolute;
     top: 77px;
     right: 126px;
     width: 28px;
 }
-#Level-5
-{
+
+#Level-5 {
     position: absolute;
     top: 77px;
     right: 154px;
     width: 28px;
 }
-#Level-6
-{
+
+#Level-6 {
     position: absolute;
     top: 77px;
     right: 182px;
     width: 28px;
 }
-#Level-7
-{
+
+#Level-7 {
     position: absolute;
     top: 77px;
     right: 210px;
     width: 28px;
 }
-#Level-8
-{
+
+#Level-8 {
     position: absolute;
     top: 77px;
     right: 238px;
     width: 28px;
 }
-#Level-9
-{
+
+#Level-9 {
     position: absolute;
     top: 77px;
     right: 266px;
     width: 28px;
 }
-#Level-10
-{
+
+#Level-10 {
     position: absolute;
     top: 77px;
     right: 294px;
     width: 28px;
 }
-#Level-11
-{
+
+#Level-11 {
     position: absolute;
     top: 77px;
     right: 322px;
     width: 28px;
 }
-#Level-12
-{
+
+#Level-12 {
     position: absolute;
     top: 77px;
     right: 350px;
     width: 28px;
+}
+
+@media only screen and (max-width: 500px) {
+    #Main-Page {
+        width: 100vw;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #Data-Input {
+        width: 90vw;
+        margin-bottom: 20px;
+    }
+    #Result{
+        margin: 0 auto;
+    }
+    .Result-Button{
+        margin-top: 10px;
+    }
+    #Save-Button
+    {
+        width: 105px;
+    }
+    #Mons-Name{
+        width: 76vw;
+    }
+    #ID-0, #ID-1{
+        width: 35vw;
+    }
+    #Mons-ATK, #Mons-DEF{
+        width: 32vw;
+    }
 }
