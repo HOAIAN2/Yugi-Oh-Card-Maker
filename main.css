@@ -188,14 +188,17 @@ hr
     width: 340px;
     height: 70px;
 }
+.Re-ATK-DEF-CSS
+{
+    top: 551px;
+    right: 134px;
+}
 #Re-Mons-ATK
 {
     font-family: 'YuGiOh';
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 551px;
-    right: 134px;
 }
 #Re-Mons-DEF
 {
@@ -203,8 +206,6 @@ hr
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 551px;
-    right: 45px;
 }
 .Re-Mons-Attribute
 {
