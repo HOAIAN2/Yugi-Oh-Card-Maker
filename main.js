@@ -1,3 +1,6 @@
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    alert('Điện thoại nó hơi bể giao diện, dùng máy tính cho dễ nha :V')
+}
 function Card_Type() {
     let Mons_Type = 0
     let Card_Type = document.querySelectorAll(".Card-Type")
