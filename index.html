@@ -133,12 +133,15 @@
     <script src="\Libraries\FileSaver.min.js"></script>
     <script>
         function Save() {
+            const Save_Button =  document.querySelector('#Save-Button')
+            Save_Button.textContent = 'Saving'
             html2canvas(document.querySelector("#Result")).then(canvas => {
                 document.body.appendChild(canvas)
                 let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
                 let Last_Canvas = All_Canvas[All_Canvas.length - 1];
                 Last_Canvas.toBlob(function (blob) {
                     saveAs(blob, "YuGi_Oh_Custom_Card.png");
+                    Save_Button.textContent = 'Save'
                 });
             });
         }
