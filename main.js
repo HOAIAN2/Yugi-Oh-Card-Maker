@@ -1,14 +1,7 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    alert('Hello Mobile')
-    let Name = document.querySelector('.Re-Mons-Name-CSS')
-    let ATK = document.querySelector('.Re-ATK-CSS')
-    let DEF  = document.querySelector('.Re-DEF-CSS')
-    Name.style.position = 'absolute'
-    ATK.style.position = 'absolute'
-    DEF.style.position = 'absolute'
-    Name.style.top = '31px'
-    ATK.style.top = '552px'
-    DEF.style.top = '552px'
+    alert('Mobile chưa tối ưu')
+    const CSS_Link = document.querySelector('link') ; console.log(CSS_Link)
+    CSS_Link.href = 'mobile.css'
 }
 function Card_Type() {
     let Mons_Type = 0
