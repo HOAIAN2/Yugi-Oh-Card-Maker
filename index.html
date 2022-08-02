@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,28 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="\Material\Level.png">
 </head>
+
 <body>
     <div id="Main-Page">
         <div id="Data-Input">
-            <span id="Card-Name">Name: </span> <input class="Input-Texts" id="Mons-Name" type="text" maxlength="23"> <br> <hr>
+            <span id="Card-Name">Name: </span> <input class="Input-Texts" id="Mons-Name" type="text" maxlength="23">
+            <br>
+            <hr>
             <span class="Input-Label">Card Type: </span>
             <input type="radio" name="Card-Type" class="Card-Type" value="0"> <span>Normal Monster</span>
             <input type="radio" name="Card-Type" class="Card-Type" value="1"> <span>Effects Monster</span>
-            <br> <hr>
+            <br>
+            <hr>
             <span class="Input-Label">Attribute:
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="1"> <span>Light</span>
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="2"> <span>Dark</span>
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="3"> <span>Fire</span>
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="4"> <span>Water</span>
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="5"> <span>Earth</span>
-            <input type="radio" name="Input-Attribute" class="Input-Attribute" value="6"> <span>Wind</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="1"> <span>Light</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="2"> <span>Dark</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="3"> <span>Fire</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="4"> <span>Water</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="5"> <span>Earth</span>
+                <input type="radio" name="Input-Attribute" class="Input-Attribute" value="6"> <span>Wind</span>
             </span>
-            <br> <hr>
+            <br>
+            <hr>
             <span class="Input-Label">Level: </span>
             <input type="radio" name="Input-Level" class="Input-Level" value="1"> <span>1</span>
             <input type="radio" name="Input-Level" class="Input-Level" value="2"> <span>2</span>
@@ -38,19 +44,35 @@
             <input type="radio" name="Input-Level" class="Input-Level" value="10"> <span>10</span>
             <input type="radio" name="Input-Level" class="Input-Level" value="11"> <span>11</span>
             <input type="radio" name="Input-Level" class="Input-Level" value="12"> <span>12</span>
-            <br> <hr>
-            <span class="Input-Label">Picture (1:1): </span> <input type="file" id="Input-File" accept="image/*"> <br> <hr>
-            <span class="Input-Label">Circulation: </span> <input class="Input-Texts" id="Input-Circulation" type="text"> <br> <hr>
-            <span class="Input-Label">Set ID: </span> <input class="Input-Texts" id="ID-0" type="text" maxlength="4"> <span>/</span> <input class="Input-Texts" id="ID-1" type="text" maxlength="4"> <br> <hr>
-            <span class="Input-Label">Type: </span> <input class="Input-Texts" id="Mons-Types" type="text" placeholder="Tuner/Dragon/Warrior..."> <br> <hr>
+            <br>
+            <hr>
+            <span class="Input-Label">Picture (1:1): </span> <input type="file" id="Input-File" accept="image/*"> <br>
+            <hr>
+            <span class="Input-Label">Circulation: </span> <input class="Input-Texts" id="Input-Circulation"
+                type="text"> <br>
+            <hr>
+            <span class="Input-Label">Set ID: </span> <input class="Input-Texts" id="ID-0" type="text" maxlength="4">
+            <span>/</span> <input class="Input-Texts" id="ID-1" type="text" maxlength="4"> <br>
+            <hr>
+            <span class="Input-Label">Type: </span> <input class="Input-Texts" id="Mons-Types" type="text"
+                placeholder="Tuner/Dragon/Warrior..."> <br>
+            <hr>
             <div id="Description">
-                <span class="Input-Label">Description: </span> <textarea style="font-family:'Arial'" name="" class="Input-Texts" id="Input-Description" cols="20" rows="5"></textarea>
+                <span class="Input-Label">Description: </span> <textarea style="font-family:'Arial'" name=""
+                    class="Input-Texts" id="Input-Description" cols="20" rows="5"></textarea>
             </div>
             <hr>
-            <span class="Input-Label">ATK / DEF: </span> <input class="Input-Texts" id="Mons-ATK" type="text" maxlength="4"> <span> / </span> <input class="Input-Texts" id="Mons-DEF" type="text" maxlength="4"> <br> <hr>
-            <span class="Input-Label">Creator: </span> <input class="Input-Texts" id="Input-Creator" type="text" placeholder="KAZUKI TAKAHASHI"> <br> <hr>
-            <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text" placeholder="2022"> <br> <hr>
-            <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text" placeholder="22022003">
+            <span class="Input-Label">ATK / DEF: </span> <input class="Input-Texts" id="Mons-ATK" type="text"
+                maxlength="4"> <span> / </span> <input class="Input-Texts" id="Mons-DEF" type="text" maxlength="4"> <br>
+            <hr>
+            <span class="Input-Label">Creator: </span> <input class="Input-Texts" id="Input-Creator" type="text"
+                placeholder="KAZUKI TAKAHASHI"> <br>
+            <hr>
+            <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text"
+                placeholder="2022"> <br>
+            <hr>
+            <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text"
+                placeholder="22022003">
             <button class="Result-Button" onclick="Generate()">Generate</button>
             <button class="Result-Button" id="Save-Button" onclick="Save()">Save</button>
         </div>
@@ -79,7 +101,8 @@
                 </div>
                 <span id="Re-Mons-ATK"></span> <span id="Re-Mons-DEF"></span>
                 <div id="Re-Mons-Types-CSS">
-                    <span style="font-weight: bold ; font-size: larger;">[</span> <span id="Re-Mons-Types"></span> <span style="font-weight: bold ; font-size: larger;">]</span>
+                    <span style="font-weight: bold ; font-size: larger;">[</span> <span id="Re-Mons-Types"></span> <span
+                        style="font-weight: bold ; font-size: larger;">]</span>
                 </div>
                 <span id="Re-Creator"></span>
                 <div id="Re-Series-CSS">
@@ -104,17 +127,17 @@
     <script src="\Libraries\html2canvas.min.js"></script>
     <script src="\Libraries\FileSaver.min.js"></script>
     <script>
-        function Save()
-        {
+        function Save() {
             html2canvas(document.querySelector("#Result")).then(canvas => {
-            document.body.appendChild(canvas)
-            let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
-            let Last_Canvas = All_Canvas[All_Canvas.length-1];
-            Last_Canvas.toBlob(function(blob) {
-            saveAs(blob, "YuGi_Oh_Custom_Card.png");
-            });
+                document.body.appendChild(canvas)
+                let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
+                let Last_Canvas = All_Canvas[All_Canvas.length - 1];
+                Last_Canvas.toBlob(function (blob) {
+                    saveAs(blob, "YuGi_Oh_Custom_Card.png");
+                });
             });
         }
     </script>
 </body>
+
 </html>

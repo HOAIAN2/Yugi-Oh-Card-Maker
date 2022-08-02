@@ -8,51 +8,24 @@
 body
 {
     background-color: whitesmoke;
+    overflow: scroll;
 }
-#Main-Card
+#Main-Page
 {
-    position: absolute;
-}
-#Other-Contents
-{
-    padding: 0px;
-    position: absolute;
-    top: -8.1px;
-    right: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 #Data-Input
 {
     background-color: white;
     width: 500px;
     padding: 20px;
-    margin-left: 80px;
-    right: 700px;
     /* border: 1px solid #0099ff; */
     border-radius: 10px;
     box-shadow: 0px 0px 5px #0099ff;
-    position: absolute;
-}
-#Result
-{
-    width: 419px;
-    height: 610px;
-    position: absolute;
-    right: 0px;
-    margin-right: 50px;
-    margin-top: 10px;
-}
-canvas
-{
-    position: absolute;
-    top: 700px;
-    right: 0px;
-    display: none;
-}
-hr
-{
-    height: 1px;
-    background-color: #0099ff;
-    border: none;
 }
 #Description
 {
@@ -122,6 +95,34 @@ hr
 {
     width: 80px;
 }
+#Result
+{
+    width: 419px;
+    height: 610px;
+    position: relative;
+    margin-top: 20px;
+}
+#Main-Card
+{
+    position: absolute;
+}
+#Other-Contents
+{
+    position: absolute;
+}
+canvas
+{
+    position: absolute;
+    top: 700px;
+    right: 0px;
+    display: none;
+}
+hr
+{
+    height: 1px;
+    background-color: #0099ff;
+    border: none;
+}
 #Re-Mons-Name
 {
     text-align: center;
@@ -134,9 +135,8 @@ hr
 #Re-Mons-Name-CSS
 {
     position: absolute;
-    top: 38px;
+    top: 30px;
     right: 74px;
-    /* border: 2px solid red; */
     width: 310px;
     height: 40px;
 }
@@ -145,7 +145,7 @@ hr
     font-weight: normal;
     font-size: 12px;
     position: absolute;
-    top: 588px;
+    top: 580px;
     right: 40px;
     /* border: 2px solid red; */
 }
@@ -154,7 +154,7 @@ hr
     font-weight: normal;
     font-size: 12px;
     position: absolute;
-    top: 589px;
+    top: 581px;
     right: 102px;
     /* border: 2px solid red; */
     width: 300px;
@@ -165,7 +165,7 @@ hr
     font-weight: bold;
     font-size: 16px;
     position: absolute;
-    top: 443px;
+    top: 435px;
     right: 80px;
     /* border: 2px solid red; */
     width: 300px;
@@ -175,7 +175,7 @@ hr
     font-weight: normal;
     font-size: 12px;
     position: absolute;
-    top: 445px;
+    top: 437px;
     right: 50px;
     /* border: 2px solid red; */
 }
@@ -183,7 +183,7 @@ hr
 {
     font-size: 12px;
     position: absolute;
-    top: 486px;
+    top: 478px;
     right: 39px;
     /* border: 2px solid red; */
     width: 340px;
@@ -195,7 +195,7 @@ hr
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 559px;
+    top: 551px;
     right: 134px;
 }
 #Re-Mons-DEF
@@ -204,13 +204,13 @@ hr
     font-size: 20px;
     font-weight: bold;
     position: absolute;
-    top: 559px;
+    top: 551px;
     right: 45px;
 }
 .Re-Mons-Attribute
 {
     position: absolute;
-    top: 39px;
+    top: 31px;
     right: 35px;
     width: 40px;
 }
@@ -224,7 +224,7 @@ hr
 #Re-Mons-Types-CSS
 {
     position: absolute;
-    top: 463px;
+    top: 454px;
     right: 83px;
     /* border: 2px solid red; */
     width: 300px;
@@ -233,97 +233,97 @@ hr
 {
     position: absolute;
     right: 52px;
-    top: 121px;
+    top: 113px;
     width: 315px; height: 315px;
 }
 .Level
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 42px;
     width: 28px;
 }
 #Level-1
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 42px;
     width: 28px;
 }
 #Level-2
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 70px;
     width: 28px;
 }
 #Level-3
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 98px;
     width: 28px;
 }
 #Level-4
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 126px;
     width: 28px;
 }
 #Level-5
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 154px;
     width: 28px;
 }
 #Level-6
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 182px;
     width: 28px;
 }
 #Level-7
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 210px;
     width: 28px;
 }
 #Level-8
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 238px;
     width: 28px;
 }
 #Level-9
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 266px;
     width: 28px;
 }
 #Level-10
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 294px;
     width: 28px;
 }
 #Level-11
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 322px;
     width: 28px;
 }
 #Level-12
 {
     position: absolute;
-    top: 85px;
+    top: 77px;
     right: 350px;
     width: 28px;
 }
