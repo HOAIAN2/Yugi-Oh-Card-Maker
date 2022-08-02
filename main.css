@@ -326,22 +326,3 @@ hr
     right: 350px;
     width: 28px;
 }
-@media screen and (max-width: 500px){
-    #Data-Input{
-        width: 100%;
-    }
-    #Main-Page
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .Input-Texts, .Input-Texts:hover, .Input-Texts:focus, #Mons-Name, #ID-0, #ID-1
-    {
-        width: inherit;
-    }
-    .Result-Button
-    {
-        margin-top: 10px;
-    }
-}
