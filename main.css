@@ -124,7 +124,6 @@ hr
 }
 #Re-Mons-Name
 {
-    text-align: center;
     font-family: 'YuGiOh';
     font-size: 36px;
     font-weight: normal;
@@ -188,17 +187,25 @@ hr
     width: 340px;
     height: 70px;
 }
+.Replace
+{
+    font-family: 'YuGiOh';
+    font-size: 20px;
+    font-weight: bold;
+}
 .Re-ATK-CSS
 {
     position: absolute;
+    width: 80px;
     top: 551px;
-    right: 134px;
+    right: 122px;
 }
 .Re-DEF-CSS
 {
     position: absolute;
     top: 551px;
-    right: 46px;
+    width: 80px;
+    right: 33px;
 }
 #Re-Mons-ATK
 {
