@@ -1,8 +1,8 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    console.log('Hello Mobile')
-    const Name = document.querySelector('.Re-Mons-Name-CSS')
-    const ATK = document.querySelector('.Re-ATK-CSS')
-    const DEF  = document.querySelector('.Re-DEF-CSS')
+    alert('Hello Mobile')
+    let Name = document.querySelector('.Re-Mons-Name-CSS')
+    let ATK = document.querySelector('.Re-ATK-CSS')
+    let DEF  = document.querySelector('.Re-DEF-CSS')
     Name.style.position = 'absolute'
     ATK.style.position = 'absolute'
     DEF.style.position = 'absolute'
