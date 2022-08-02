@@ -1,5 +1,10 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    alert('Điện thoại nó hơi bể giao diện, dùng máy tính cho dễ nha :V')
+    const Name = document.querySelector('.Re-Mons-Name-CSS')
+    const ATK = document.querySelector('.Re-ATK-CSS')
+    const DEF  = document.querySelector('Re-DEF-CSS')
+    Name.style.top = '31px'
+    ATK.style.top = '552px'
+    DEF.style.top = '552px'
 }
 function Card_Type() {
     let Mons_Type = 0
