@@ -1,13 +1,13 @@
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {d
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     console.log('Hello Mobile')
     const Name = document.querySelector('.Re-Mons-Name-CSS')
     const ATK = document.querySelector('.Re-ATK-CSS')
     const DEF  = document.querySelector('.Re-DEF-CSS')
     Name.style.position = 'absolute'
-    Name.style.top = '31px'
     ATK.style.position = 'absolute'
-    ATK.style.top = '552px'
     DEF.style.position = 'absolute'
+    Name.style.top = '31px'
+    ATK.style.top = '552px'
     DEF.style.top = '552px'
 }
 function Card_Type() {
