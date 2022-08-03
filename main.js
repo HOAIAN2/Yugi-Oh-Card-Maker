@@ -7,7 +7,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     ATK.style.position = 'absolute'
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
-    Name.style.top = '33px'
+    Name.style.top = '34px'
     ATK.style.top = '553px'
     DEF.style.top = '553px'
     Type.style.top = '457px'
