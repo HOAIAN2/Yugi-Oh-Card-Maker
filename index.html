@@ -136,6 +136,7 @@
     <script>
         function Save() {
             const Save_Button =  document.querySelector('#Save-Button')
+            Save_Button.disabled = true
             Save_Button.textContent = 'Saving...'
             html2canvas(document.querySelector("#Result")).then(canvas => {
                 document.body.appendChild(canvas)
@@ -144,10 +145,10 @@
                 Last_Canvas.toBlob(function (blob) {
                     saveAs(blob, "YuGi_Oh_Custom_Card.png");
                     Save_Button.textContent = 'Save'
+                    Save_Button.disabled = false
                 });
             });
         }
     </script>
 </body>
-
 </html>

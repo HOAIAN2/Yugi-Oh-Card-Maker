@@ -61,7 +61,7 @@ function Mons_Typing() {
     }
     else {
         if (Mons_Types == '') Re_Mons_Types = "EFFECTS"
-        Re_Mons_Types = (Mons_Types + "/EFFECTS")
+        else Re_Mons_Types = (Mons_Types + "/EFFECTS")
     }
     document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types
 }
@@ -79,6 +79,7 @@ function Images() {
 }
 function Generate() {
     let Gen_Button = document.querySelector('.Result-Button')
+    Gen_Button.disabled = true
     Gen_Button.textContent = 'Generating...'
     let Re_Mons_Type = document.querySelector("#Main-Card")
     switch (Card_Type()) {
@@ -130,6 +131,7 @@ function Generate() {
                 let test3 = load3
                 if(test == true && test2 == true && test3 == true)
                 {
+                    Gen_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
@@ -148,6 +150,7 @@ function Generate() {
                 let test3 = load3
                 if(test == true && test3 == true)
                 {
+                    Gen_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
