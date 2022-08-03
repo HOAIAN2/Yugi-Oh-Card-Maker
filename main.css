@@ -127,7 +127,6 @@ hr {
     position: absolute;
     top: 580px;
     right: 40px;
-    /* border: 2px solid red; */
 }
 #Re-Series-CSS {
     font-weight: normal;
@@ -138,10 +137,12 @@ hr {
     /* border: 2px solid red; */
     width: 300px;
 }
-#Re-Circulation-CSS {
+#Re-Circulation {
     font-family: 'YuGiOh';
     font-weight: bold;
     font-size: 16px;
+}
+#Re-Circulation-CSS {
     position: absolute;
     top: 435px;
     right: 80px;
@@ -205,15 +206,15 @@ hr {
     position: absolute;
     top: 454px;
     right: 83px;
-    /* border: 2px solid red; */
     width: 300px;
 }
 .Re-Images {
     position: absolute;
-    right: 52px;
-    top: 114px;
-    width: 315px;
-    height: 313px;
+    right: 51px;
+    top: 112px;
+    width: 317px;
+    height: 317px;
+    z-index: -10;
 }
 .Level {
     position: absolute;
@@ -295,8 +296,8 @@ hr {
 }
 @media only screen and (max-width: 500px) {
     #Main-Page {
-        width: 100vw;
-        /* height: 100vh; */
+        width: fit-content;
+        height: fit-content;
         display: flex;
         align-items: center;
         flex-wrap: wrap;

@@ -3,14 +3,17 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     let ATK = document.querySelector('.Re-ATK-CSS')
     let DEF = document.querySelector('.Re-DEF-CSS')
     let Type = document.querySelector('#Re-Mons-Types-CSS')
+    let Cir = document.querySelector('#Re-Circulation-CSS')
     Name.style.position = 'absolute'
     ATK.style.position = 'absolute'
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
-    Name.style.top = '32px'
+    Cir.style.position = 'absolute'
+    Name.style.top = '33px'
     ATK.style.top = '553px'
     DEF.style.top = '553px'
     Type.style.top = '457px'
+    Cir.style.top = '437px'
 }
 function Card_Type() {
     let Mons_Type = 0
@@ -82,9 +85,9 @@ function Generate() {
     Gen_Button.textContent = 'Generating...'
     let Re_Mons_Type = document.querySelector("#Main-Card")
     switch (Card_Type()) {
-        case 0: Re_Mons_Type.src = "/Material/Normal_Mons.jpg"; break
-        case 1: Re_Mons_Type.src = "/Material/Effects_Mons.jpg"; break
-        default: Re_Mons_Type.src = "/Material/Normal_Mons.jpg"; break
+        case 0: Re_Mons_Type.src = "/Material/Normal_Mons.png"; break
+        case 1: Re_Mons_Type.src = "/Material/Effects_Mons.png"; break
+        default: Re_Mons_Type.src = "/Material/Normal_Mons.png"; break
     }
     let Mons_Name = document.querySelector("#Mons-Name").value
     let Mons_ATK = document.querySelector("#Mons-ATK").value
