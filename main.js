@@ -13,7 +13,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     ATK.style.top = '553px'
     DEF.style.top = '553px'
     Type.style.top = '457px'
-    Cir.style.top = '437px'
+    Cir.style.top = '435px'
 }
 function Card_Type() {
     let Mons_Type = 0
