@@ -56,9 +56,11 @@ function Mons_Typing() {
     let Mons_Types = document.querySelector("#Mons-Types").value
     let Re_Mons_Types = document.querySelector("#Re-Mons-Types")
     if (Card_Type() == 0) {
-        Re_Mons_Types = (Mons_Types + "/NORMAL")
+        if(Mons_Types == '') Re_Mons_Types = "NORMAL"
+        else Re_Mons_Types = (Mons_Types + "/NORMAL")
     }
     else {
+        if(Mons_Types == '') Re_Mons_Types = "EFFECTS"
         Re_Mons_Types = (Mons_Types + "/EFFECTS")
     }
     document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types
@@ -94,7 +96,7 @@ function Generate() {
     document.querySelector("#Re-Mons-ATK").textContent = Mons_ATK
     document.querySelector("#Re-Mons-DEF").textContent = Mons_DEF
     if ((Year == "") && (Creator == "")) document.querySelector("#Re-Creator").textContent = ""
-    else document.querySelector("#Re-Creator").innerHTML = "&copy;" + " " + Year + " " + Creator
+    else document.querySelector("#Re-Creator").textContent = "©" + " " + Year + " " + Creator
     document.querySelector("#Re-Series").textContent = Series
     document.querySelector("#Re-Circulation").textContent = Circulation
     document.querySelector("#Re-ID").textContent = ID
