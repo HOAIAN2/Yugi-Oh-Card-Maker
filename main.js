@@ -1,4 +1,4 @@
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     let Name = document.querySelector('#Re-Mons-Name-CSS')
     let ATK = document.querySelector('.Re-ATK-CSS')
     let DEF = document.querySelector('.Re-DEF-CSS')
@@ -56,17 +56,18 @@ function Mons_Typing() {
     let Mons_Types = document.querySelector("#Mons-Types").value
     let Re_Mons_Types = document.querySelector("#Re-Mons-Types")
     if (Card_Type() == 0) {
-        if(Mons_Types == '') Re_Mons_Types = "NORMAL"
+        if (Mons_Types == '') Re_Mons_Types = "NORMAL"
         else Re_Mons_Types = (Mons_Types + "/NORMAL")
     }
     else {
-        if(Mons_Types == '') Re_Mons_Types = "EFFECTS"
+        if (Mons_Types == '') Re_Mons_Types = "EFFECTS"
         Re_Mons_Types = (Mons_Types + "/EFFECTS")
     }
     document.querySelector("#Re-Mons-Types").textContent = Re_Mons_Types
 }
 function Images() {
     const Input_File = document.querySelector('input[type=file]')
+    if (Input_File.files[0] == undefined) return 0
     const reader = new FileReader()
     reader.onload = function () {
         const img = new Image()
@@ -74,8 +75,11 @@ function Images() {
         document.querySelector(".Re-Images").src = img.src
     }
     reader.readAsDataURL(Input_File.files[0])
+    return 1
 }
 function Generate() {
+    let Gen_Button = document.querySelector('.Result-Button')
+    Gen_Button.textContent = 'Generating...'
     let Re_Mons_Type = document.querySelector("#Main-Card")
     switch (Card_Type()) {
         case 0: Re_Mons_Type.src = "/Material/Normal_Mons.jpg"; break
@@ -105,4 +109,50 @@ function Generate() {
     Get_Monster_Level()
     Mons_Typing()
     Images()
+    function CheckLoad() {
+        let load1 = false, load2 = false, load3 = false
+        let Image = document.querySelector('.Re-Images')
+        let Type = document.querySelector(".Re-Mons-Attribute")
+        if(Images() == 1)
+        {
+            Re_Mons_Type.addEventListener('load',()=>{
+                load1 = true
+            })
+            Image.addEventListener('load',()=>{
+                load2 = true
+            })
+            Type.addEventListener('load',()=>{
+                load3 = true
+            })
+            let FullCheck = setInterval(()=>{
+                let test = load1
+                let test2 = load2
+                let test3 = load3
+                if(test == true && test2 == true && test3 == true)
+                {
+                    Gen_Button.textContent = 'Generate'
+                    clearInterval(FullCheck)
+                }
+            },0)
+        }
+        else
+        {
+            Re_Mons_Type.addEventListener('load',()=>{
+                load1 = true
+            })
+            Type.addEventListener('load',()=>{
+                load3 = true
+            })
+            let FullCheck = setInterval(()=>{
+                let test = load1
+                let test3 = load3
+                if(test == true && test3 == true)
+                {
+                    Gen_Button.textContent = 'Generate'
+                    clearInterval(FullCheck)
+                }
+            },0)
+        }
+    }
+    CheckLoad()
 }
