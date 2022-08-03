@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Maker</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="\Material\Level.png">
 </head>
 
@@ -66,13 +66,13 @@
                 maxlength="4"> <span> / </span> <input class="Input-Texts" id="Mons-DEF" type="text" maxlength="4"> <br>
             <hr>
             <span class="Input-Label">Creator: </span> <input class="Input-Texts" id="Input-Creator" type="text"
-                placeholder="KAZUKI TAKAHASHI"> <br>
+                placeholder="LE HOAI AN"> <br>
             <hr>
             <span class="Input-Label">Year: </span> <input class="Input-Texts" id="Input-Year" type="text"
-                placeholder="2022"> <br>
+                placeholder=""> <br>
             <hr>
             <span class="Input-Label">Serial Number: </span> <input class="Input-Texts" id="Input-Series" type="text"
-                placeholder="22022003">
+                placeholder="">
             <button class="Result-Button" onclick="Generate()">Generate</button>
             <button class="Result-Button" id="Save-Button" onclick="Save()">Save</button>
         </div>
@@ -133,22 +133,5 @@
     <script src="main.js"></script>
     <script src="\Libraries\html2canvas.min.js"></script>
     <script src="\Libraries\FileSaver.min.js"></script>
-    <script>
-        function Save() {
-            const Save_Button =  document.querySelector('#Save-Button')
-            Save_Button.disabled = true
-            Save_Button.textContent = 'Saving...'
-            html2canvas(document.querySelector("#Result")).then(canvas => {
-                document.body.appendChild(canvas)
-                let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
-                let Last_Canvas = All_Canvas[All_Canvas.length - 1];
-                Last_Canvas.toBlob(function (blob) {
-                    saveAs(blob, "YuGi_Oh_Custom_Card.png");
-                    Save_Button.textContent = 'Save'
-                    Save_Button.disabled = false
-                });
-            });
-        }
-    </script>
 </body>
 </html>

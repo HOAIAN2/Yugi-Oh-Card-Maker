@@ -12,6 +12,14 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     DEF.style.top = '553px'
     Type.style.top = '457px'
 }
+function PlaceHolder() {
+    window.addEventListener('load',()=>{
+        const Year = new Date
+        document.querySelector('#Input-Year').placeholder = Year.getFullYear()
+        document.querySelector('#Input-Series').placeholder = Math.floor(Math.random() * 9999999) + 1000000;
+    })
+}
+PlaceHolder()
 function Card_Type() {
     let Mons_Type = 0
     let Card_Type = document.querySelectorAll(".Card-Type")
@@ -158,4 +166,19 @@ function Generate() {
         }
     }
     CheckLoad()
+}
+function Save() {
+    const Save_Button =  document.querySelector('#Save-Button')
+    Save_Button.disabled = true
+    Save_Button.textContent = 'Saving...'
+    html2canvas(document.querySelector("#Result")).then(canvas => {
+        document.body.appendChild(canvas)
+        let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
+        let Last_Canvas = All_Canvas[All_Canvas.length - 1];
+        Last_Canvas.toBlob(function (blob) {
+            saveAs(blob, "YuGi_Oh_Custom_Card.png");
+            Save_Button.textContent = 'Save'
+            Save_Button.disabled = false
+        });
+    });
 }
