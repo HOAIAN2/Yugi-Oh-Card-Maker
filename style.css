@@ -113,6 +113,8 @@ hr {
     font-weight: normal;
     color: white;
     text-shadow: 0px 0px 2px white;
+    word-wrap: break-word;
+    max-width: 310px;
 }
 #Re-Mons-Name-CSS {
     display: flex;
@@ -122,6 +124,7 @@ hr {
     right: 74px;
     width: 310px;
     height: 40px;
+    word-wrap: break-word;
 }
 #Re-Creator {
     font-weight: normal;
@@ -156,13 +159,16 @@ hr {
     top: 437px;
     right: 50px;
 }
-#Re-Description-CSS {
+#Re-Description {
     font-size: 12px;
+}
+#Re-Description-CSS {
     position: absolute;
     top: 478px;
-    right: 39px;
-    width: 340px;
+    right: 37px;
+    width: 342px;
     height: 70px;
+    word-wrap: break-word;
 }
 .Replace {
     font-family: 'YuGiOh';
