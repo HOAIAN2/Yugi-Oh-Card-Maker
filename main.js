@@ -88,7 +88,6 @@ function Images() {
 function Test_Style() {
     let Name_Offset = document.querySelector('#Re-Mons-Name')
     let Des_Offset = document.querySelector('#Re-Description')
-    console.log(Des_Offset.offsetHeight)
     let Des_Font_Size = 12
     let Name_Font_Size = 36
     if(Name_Offset.offsetHeight > 40)
@@ -101,16 +100,15 @@ function Test_Style() {
     }
     else
     {
-        if(Name_Offset.offsetHeight < 40)
+        Name_Font_Size = 36
+        Name_Offset.style.fontSize = Name_Font_Size + 'px'
+        while(Name_Offset.offsetHeight > 40)
         {
-            while(Name_Offset.offsetHeight > 40)
-            {
-                ++ Name_Font_Size
-                Name_Offset.style.fontSize = Name_Font_Size + 'px'
-            }
+            -- Name_Font_Size
+            Name_Offset.style.fontSize = Name_Font_Size + 'px'
         }
     }
-    ////// Des
+    //// Description
     if(Des_Offset.offsetHeight > 70)
     {
         while(Des_Offset.offsetHeight > 70)
@@ -124,7 +122,6 @@ function Test_Style() {
         Des_Font_Size = 12
         Des_Offset.style.fontSize = Des_Font_Size + 'px'
     }
-    console.log(Des_Offset.offsetHeight)
 }
 function Generate() {
     let Gen_Button = document.querySelector('.Result-Button')
