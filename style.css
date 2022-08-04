@@ -115,6 +115,8 @@ hr {
     text-shadow: 0px 0px 2px white;
 }
 #Re-Mons-Name-CSS {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 30px;
     right: 74px;

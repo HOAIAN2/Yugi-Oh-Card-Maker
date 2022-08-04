@@ -85,6 +85,23 @@ function Images() {
     reader.readAsDataURL(Input_File.files[0])
     return 1
 }
+function Test_Style() {
+    let Name_Offset = document.querySelector('#Re-Mons-Name')
+    let Name_Font_Size = 36
+    if(Name_Offset.offsetHeight > 40)
+    {
+        while(Name_Offset.offsetHeight > 40)
+        {
+            -- Name_Font_Size
+            Name_Offset.style.fontSize = Name_Font_Size + 'px'
+        }
+    }
+    else
+    {
+        Name_Font_Size = 36
+        Name_Offset.style.fontSize = Name_Font_Size + 'px'
+    }
+}
 function Generate() {
     let Gen_Button = document.querySelector('.Result-Button')
     Gen_Button.disabled = true
@@ -112,10 +129,10 @@ function Generate() {
     else document.querySelector("#Re-Creator").textContent = "©" + " " + Year + " " + Creator
     document.querySelector("#Re-Series").textContent = Series
     document.querySelector("#Re-Circulation").textContent = Circulation
-    document.querySelector("#Re-ID").textContent = ID
     document.querySelector("#Re-Description").textContent = Description
     Get_Monster_Attribute()
     Get_Monster_Level()
+    document.querySelector("#Re-ID").textContent = ID
     Mons_Typing()
     Images()
     function CheckLoad() {
@@ -166,6 +183,7 @@ function Generate() {
         }
     }
     CheckLoad()
+    Test_Style()
 }
 function Save() {
     const Save_Button =  document.querySelector('#Save-Button')
