@@ -212,15 +212,16 @@ hr {
 #Re-Mons-Types-CSS {
     position: absolute;
     top: 454px;
-    right: 83px;
-    width: 300px;
+    right: 43px;
+    width: 340px;
+    height: 22px;
 }
 .Re-Images {
     position: absolute;
-    right: 51px;
+    right: 50px;
     top: 112px;
-    width: 317px;
-    height: 317px;
+    width: 319px;
+    height: 319px;
     z-index: -10;
 }
 .Level {

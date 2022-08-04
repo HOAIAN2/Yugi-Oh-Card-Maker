@@ -16,7 +16,7 @@ function PlaceHolder() {
     window.addEventListener('load',()=>{
         const Year = new Date
         document.querySelector('#Input-Year').placeholder = Year.getFullYear()
-        document.querySelector('#Input-Series').placeholder = Math.floor(Math.random() * 9999999) + 1000000;
+        document.querySelector('#Input-Series').placeholder = Math.floor(Math.random() * 999999999999) + 100000000000;
     })
 }
 PlaceHolder()
@@ -121,6 +121,11 @@ function Test_Style() {
     {
         Des_Font_Size = 12
         Des_Offset.style.fontSize = Des_Font_Size + 'px'
+        while(Des_Offset.offsetHeight > 70)
+        {
+            -- Des_Font_Size
+            Des_Offset.style.fontSize = Des_Font_Size + 'px'
+        }
     }
 }
 function Generate() {
