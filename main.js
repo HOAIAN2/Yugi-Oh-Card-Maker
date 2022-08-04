@@ -13,7 +13,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     Type.style.top = '457px'
 }
 function PlaceHolder() {
-    window.addEventListener('load',()=>{
+    window.addEventListener('load', () => {
         const Year = new Date
         document.querySelector('#Input-Year').placeholder = Year.getFullYear()
         document.querySelector('#Input-Series').placeholder = Math.floor(Math.random() * 999999999999) + 100000000000;
@@ -90,40 +90,32 @@ function Test_Style() {
     let Des_Offset = document.querySelector('#Re-Description')
     let Des_Font_Size = 12
     let Name_Font_Size = 36
-    if(Name_Offset.offsetHeight > 40)
-    {
-        while(Name_Offset.offsetHeight > 40)
-        {
-            -- Name_Font_Size
+    if (Name_Offset.offsetHeight > 40) {
+        while (Name_Offset.offsetHeight > 40) {
+            --Name_Font_Size
             Name_Offset.style.fontSize = Name_Font_Size + 'px'
         }
     }
-    else
-    {
+    else {
         Name_Font_Size = 36
         Name_Offset.style.fontSize = Name_Font_Size + 'px'
-        while(Name_Offset.offsetHeight > 40)
-        {
-            -- Name_Font_Size
+        while (Name_Offset.offsetHeight > 40) {
+            --Name_Font_Size
             Name_Offset.style.fontSize = Name_Font_Size + 'px'
         }
     }
     //// Description
-    if(Des_Offset.offsetHeight > 70)
-    {
-        while(Des_Offset.offsetHeight > 70)
-        {
-            -- Des_Font_Size
+    if (Des_Offset.offsetHeight > 70) {
+        while (Des_Offset.offsetHeight > 70) {
+            --Des_Font_Size
             Des_Offset.style.fontSize = Des_Font_Size + 'px'
         }
     }
-    else
-    {
+    else {
         Des_Font_Size = 12
         Des_Offset.style.fontSize = Des_Font_Size + 'px'
-        while(Des_Offset.offsetHeight > 70)
-        {
-            -- Des_Font_Size
+        while (Des_Offset.offsetHeight > 70) {
+            --Des_Font_Size
             Des_Offset.style.fontSize = Des_Font_Size + 'px'
         }
     }
@@ -165,64 +157,62 @@ function Generate() {
         let load1 = false, load2 = false, load3 = false
         let Image = document.querySelector('.Re-Images')
         let Type = document.querySelector(".Re-Mons-Attribute")
-        if(Images() == 1)
-        {
-            Re_Mons_Type.addEventListener('load',()=>{
+        if (Images() == 1) {
+            Re_Mons_Type.addEventListener('load', () => {
                 load1 = true
             })
-            Image.addEventListener('load',()=>{
+            Image.addEventListener('load', () => {
                 load2 = true
             })
-            Type.addEventListener('load',()=>{
+            Type.addEventListener('load', () => {
                 load3 = true
             })
-            let FullCheck = setInterval(()=>{
+            let FullCheck = setInterval(() => {
                 let test = load1
                 let test2 = load2
                 let test3 = load3
-                if(test == true && test2 == true && test3 == true)
-                {
+                if (test == true && test2 == true && test3 == true) {
                     Gen_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
-            },0)
+            }, 0)
         }
-        else
-        {
-            Re_Mons_Type.addEventListener('load',()=>{
+        else {
+            Re_Mons_Type.addEventListener('load', () => {
                 load1 = true
             })
-            Type.addEventListener('load',()=>{
+            Type.addEventListener('load', () => {
                 load3 = true
             })
-            let FullCheck = setInterval(()=>{
+            let FullCheck = setInterval(() => {
                 let test = load1
                 let test3 = load3
-                if(test == true && test3 == true)
-                {
+                if (test == true && test3 == true) {
                     Gen_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
-            },0)
+            }, 0)
         }
     }
     CheckLoad()
     Test_Style()
 }
 function Save() {
-    const Save_Button =  document.querySelector('#Save-Button')
+    const Save_Button = document.querySelector('#Save-Button')
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
     html2canvas(document.querySelector("#Result")).then(canvas => {
         document.body.appendChild(canvas)
-        let All_Canvas = document.querySelectorAll('canvas'); // Canvas always Create at last DOM
-        let Last_Canvas = All_Canvas[All_Canvas.length - 1];
-        Last_Canvas.toBlob(function (blob) {
-            saveAs(blob, "YuGi_Oh_Custom_Card.png");
-            Save_Button.textContent = 'Save'
-            Save_Button.disabled = false
-        });
+        const Canvas = document.querySelector('canvas')
+        const DataURL = Canvas.toDataURL()
+        const a = document.createElement('a')
+        a.href = DataURL
+        a.download = 'YuGi_Oh_Custom_Card.png'
+        a.click()
+        Canvas.remove()
+        Save_Button.textContent = 'Save'
+        Save_Button.disabled = false
     });
 }
