@@ -204,24 +204,12 @@ function Generate() {
 }
 function Save() {
     const Save_Button = document.querySelector('#Save-Button')
-    let ATK = document.querySelector('.Re-ATK-CSS')
-    let DEF = document.querySelector('.Re-DEF-CSS')
-    ATK.style.position = 'absolute'
-    DEF.style.position = 'absolute'
     const Render_Scale = 5
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        ATK.style.top = '552px'
-        DEF.style.top = '552px'
-    }
     html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
         document.body.appendChild(canvas)
         const Canvas = document.querySelector('canvas')
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            ATK.style.top = '553px'
-            DEF.style.top = '553px'
-        }
         const DataURL = Canvas.toDataURL()
         const a = document.createElement('a')
         a.href = DataURL
