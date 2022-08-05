@@ -180,16 +180,12 @@ hr {
     width: 80px;
     top: 551px;
     right: 122px;
-    display: flex;
-    align-items: center;
 }
 .Re-DEF-CSS {
     position: absolute;
     top: 551px;
     width: 80px;
     right: 33px;
-    display: flex;
-    align-items: center;
 }
 #Re-Mons-ATK {
     font-family: 'YuGiOh';
