@@ -3,14 +3,17 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     let ATK = document.querySelector('.Re-ATK-CSS')
     let DEF = document.querySelector('.Re-DEF-CSS')
     let Type = document.querySelector('#Re-Mons-Types-CSS')
+    let Cir = document.querySelector('#Re-Circulation-CSS')
     Name.style.position = 'absolute'
     ATK.style.position = 'absolute'
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
+    Cir.style.position = 'absolute'
     Name.style.top = '34px'
-    ATK.style.top = '553px'
-    DEF.style.top = '553px'
+    ATK.style.top = '552px'
+    DEF.style.top = '552px'
     Type.style.top = '457px'
+    Cir.style.top = '434px'
 }
 function PlaceHolder() {
     window.addEventListener('load', () => {
