@@ -24,7 +24,10 @@ function Card_Type() {
     let Mons_Type = 0
     let Card_Type = document.querySelectorAll(".Card-Type")
     if (Card_Type[0].checked) Mons_Type = 0
-    if (Card_Type[1].checked) Mons_Type = 1
+    else
+    {
+         if (Card_Type[1].checked) Mons_Type = 1
+    }
     return Mons_Type
 }
 function Get_Monster_Attribute() {
@@ -154,6 +157,7 @@ function Generate() {
     Mons_Typing()
     Images()
     function CheckLoad() {
+        let checkdelay = 0
         let load1 = false, load2 = false, load3 = false
         let Image = document.querySelector('.Re-Images')
         let Type = document.querySelector(".Re-Mons-Attribute")
@@ -176,7 +180,7 @@ function Generate() {
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
-            }, 0)
+            }, checkdelay)
         }
         else {
             Re_Mons_Type.addEventListener('load', () => {
@@ -193,7 +197,7 @@ function Generate() {
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
-            }, 0)
+            }, checkdelay)
         }
     }
     CheckLoad()
