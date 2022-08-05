@@ -212,8 +212,8 @@ function Save() {
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        ATK.style.top = '552.9px'
-        DEF.style.top = '552.9px'
+        ATK.style.top = '552.5px'
+        DEF.style.top = '552.5px'
     }
     html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
         document.body.appendChild(canvas)
