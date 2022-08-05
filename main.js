@@ -8,8 +8,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
     Name.style.top = '34px'
-    ATK.style.top = '552.5px'
-    DEF.style.top = '552.5px'
+    ATK.style.top = '552.8px'
+    DEF.style.top = '552.8px'
     Type.style.top = '457px'
 }
 function PlaceHolder() {
