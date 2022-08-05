@@ -205,9 +205,10 @@ function Generate() {
 }
 function Save() {
     const Save_Button = document.querySelector('#Save-Button')
+    const Render_Scale = 5
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
-    html2canvas(document.querySelector("#Result")).then(canvas => {
+    html2canvas(document.querySelector("#Result"), {scale : Render_Scale}).then(canvas => {
         document.body.appendChild(canvas)
         const Canvas = document.querySelector('canvas')
         const DataURL = Canvas.toDataURL()
