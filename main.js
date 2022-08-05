@@ -8,8 +8,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
     Name.style.top = '34px'
-    ATK.style.top = '552.9px'
-    DEF.style.top = '552.9px'
+    ATK.style.top = '553px'
+    DEF.style.top = '553px'
     Type.style.top = '457px'
 }
 function PlaceHolder() {
@@ -24,9 +24,8 @@ function Card_Type() {
     let Mons_Type = 0
     let Card_Type = document.querySelectorAll(".Card-Type")
     if (Card_Type[0].checked) Mons_Type = 0
-    else
-    {
-         if (Card_Type[1].checked) Mons_Type = 1
+    else {
+        if (Card_Type[1].checked) Mons_Type = 1
     }
     return Mons_Type
 }
@@ -205,12 +204,24 @@ function Generate() {
 }
 function Save() {
     const Save_Button = document.querySelector('#Save-Button')
+    let ATK = document.querySelector('.Re-ATK-CSS')
+    let DEF = document.querySelector('.Re-DEF-CSS')
+    ATK.style.position = 'absolute'
+    DEF.style.position = 'absolute'
     const Render_Scale = 5
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
-    html2canvas(document.querySelector("#Result"), {scale : Render_Scale}).then(canvas => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        ATK.style.top = '552.9px'
+        DEF.style.top = '552.9px'
+    }
+    html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
         document.body.appendChild(canvas)
         const Canvas = document.querySelector('canvas')
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            ATK.style.top = '553px'
+            DEF.style.top = '553px'
+        }
         const DataURL = Canvas.toDataURL()
         const a = document.createElement('a')
         a.href = DataURL
