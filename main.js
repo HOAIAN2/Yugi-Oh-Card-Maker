@@ -8,8 +8,8 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
     Name.style.top = '34px'
-    ATK.style.top = '552.9px'
-    DEF.style.top = '552.9px'
+    ATK.style.top = '552.7px'
+    DEF.style.top = '552.7px'
     Type.style.top = '457px'
 }
 function PlaceHolder() {
@@ -207,7 +207,7 @@ function Save() {
     const Render_Scale = 5
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
-    html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
+    html2canvas(document.querySelector("#Result"), { scale: Render_Scale }, {windowWidth : 1920}).then(canvas => {
         document.body.appendChild(canvas)
         const Canvas = document.querySelector('canvas')
         const DataURL = Canvas.toDataURL()
