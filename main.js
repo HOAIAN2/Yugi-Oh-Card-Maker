@@ -3,14 +3,17 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     let ATK = document.querySelector('.Re-ATK-CSS')
     let DEF = document.querySelector('.Re-DEF-CSS')
     let Type = document.querySelector('#Re-Mons-Types-CSS')
+    let Cir = document.querySelector('#Re-Circulation-CSS')
     Name.style.position = 'absolute'
     ATK.style.position = 'absolute'
     DEF.style.position = 'absolute'
     Type.style.position = 'absolute'
+    Cir.style.position = 'absolute'
     Name.style.top = '34px'
     ATK.style.top = '552.0px'
     DEF.style.top = '552.0px'
     Type.style.top = '457px'
+    Cir.style.top = '434.0px'
 }
 function PlaceHolder() {
     window.addEventListener('load', () => {
@@ -207,7 +210,7 @@ function Save() {
     const Render_Scale = 5
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
-    html2canvas(document.querySelector("#Result"), { scale: Render_Scale }, {windowWidth : 1920}).then(canvas => {
+    html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
         document.body.appendChild(canvas)
         const Canvas = document.querySelector('canvas')
         const DataURL = Canvas.toDataURL()
