@@ -13,7 +13,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     ATK.style.top = '552.0px'
     DEF.style.top = '552.0px'
     Type.style.top = '457px'
-    Cir.style.top = '434.0px'
+    Cir.style.top = '432.0px'
 }
 function PlaceHolder() {
     window.addEventListener('load', () => {
