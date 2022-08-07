@@ -206,8 +206,26 @@ function Generate() {
     Test_Style()
 }
 function Save() {
+    const Container = document.querySelector('#Render-Option')
+    const Blur_Div = document.querySelector('#Blur-Div')
+    const Exit = document.querySelector('#Exit-Button')
+    const input_range = document.querySelector('#quality-range')
+    const quality = document.querySelector('#confirm-quality')
+    Blur_Div.style.display = 'block'
+    Container.style.transform = 'translate(-50%, -50%) scale(1)'
+    input_range.addEventListener('change',()=>{
+        quality.textContent = input_range.value
+    })
+    Exit.addEventListener('click',()=>{
+        Blur_Div.style.display = 'none'
+        Container.style.transform = 'translate(-50%, -50%) scale(0)'
+    })
+}
+function Render() {
     const Save_Button = document.querySelector('#Save-Button')
-    const Render_Scale = 5
+    const Confirm_Button = document.querySelector('#Confirm-Button')
+    const temp = document.querySelector('#confirm-quality').textContent
+    const Render_Scale = parseInt(temp)
     Save_Button.disabled = true
     Save_Button.textContent = 'Saving...'
     html2canvas(document.querySelector("#Result"), { scale: Render_Scale }).then(canvas => {
@@ -221,5 +239,15 @@ function Save() {
         Canvas.remove()
         Save_Button.textContent = 'Save'
         Save_Button.disabled = false
+        Confirm_Button.disabled = false
     });
 }
+const Confirm_Button = document.querySelector('#Confirm-Button')
+Confirm_Button.addEventListener('click', ()=>{
+    const Container = document.querySelector('#Render-Option')
+    const Blur_Div = document.querySelector('#Blur-Div')
+    Blur_Div.style.display = 'none'
+    Container.style.transform = 'translate(-50%, -50%) scale(0)'
+    Confirm_Button.disabled = true
+    Render()
+})
