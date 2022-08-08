@@ -90,7 +90,7 @@ function Images() {
     reader.readAsDataURL(Input_File.files[0])
     return 1
 }
-function Test_Style() {
+function Auto_Resize() {
     let Name_Offset = document.querySelector('#Re-Mons-Name')
     let Des_Offset = document.querySelector('#Re-Description')
     let Des_Font_Size = 12
@@ -203,7 +203,7 @@ function Generate() {
         }
     }
     CheckLoad()
-    Test_Style()
+    Auto_Resize()
 }
 function Save() {
     const Container = document.querySelector('#Render-Option')
