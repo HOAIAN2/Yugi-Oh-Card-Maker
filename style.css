@@ -94,7 +94,8 @@ body {
     position: fixed;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%) scale(0);
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #Confirm-Button , #Exit-Button {
     width: 80px;
