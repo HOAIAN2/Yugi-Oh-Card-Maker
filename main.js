@@ -156,7 +156,7 @@ function Generate() {
     else document.querySelector("#Re-Creator").textContent = "©" + " " + Year + " " + Creator
     document.querySelector("#Re-Series").textContent = Series
     document.querySelector("#Re-Circulation").textContent = Circulation
-    document.querySelector("#Re-Description").textContent = Description
+    document.querySelector("#Re-Description").innerText = Description
     Get_Monster_Attribute()
     Get_Monster_Level()
     document.querySelector("#Re-ID").textContent = ID
