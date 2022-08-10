@@ -17,6 +17,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 function PlaceHolder() {
     window.addEventListener('load', () => {
+        const quality = document.querySelector('#confirm-quality')
+        const input_quality = document.querySelector('#quality-range')
+        quality.textContent = input_quality.value
         const Year = new Date
         document.querySelector('#Input-Year').placeholder = Year.getFullYear()
         document.querySelector('#Input-Series').placeholder = Math.floor(Math.random() * 999999999999) + 100000000000;
@@ -95,6 +98,7 @@ function Auto_Resize() {
     let Des_Offset = document.querySelector('#Re-Description')
     let Des_Font_Size = 12
     let Name_Font_Size = 36
+    // For Monster Name
     if (Name_Offset.offsetHeight > 40) {
         while (Name_Offset.offsetHeight > 40) {
             --Name_Font_Size
@@ -109,7 +113,7 @@ function Auto_Resize() {
             Name_Offset.style.fontSize = Name_Font_Size + 'px'
         }
     }
-    //// Description
+    //// For Description
     if (Des_Offset.offsetHeight > 70) {
         while (Des_Offset.offsetHeight > 70) {
             --Des_Font_Size
