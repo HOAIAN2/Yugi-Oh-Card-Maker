@@ -130,8 +130,10 @@ function Auto_Resize() {
     }
 }
 function Generate() {
-    let Gen_Button = document.querySelector('.Result-Button')
+    const Gen_Button = document.querySelector('.Result-Button')
+    const Save_Button = document.querySelector('#Save-Button')
     Gen_Button.disabled = true
+    Save_Button.disabled = true
     Gen_Button.textContent = 'Generating...'
     let Re_Mons_Type = document.querySelector("#Main-Card")
     switch (Card_Type()) {
@@ -156,6 +158,7 @@ function Generate() {
     else document.querySelector("#Re-Creator").textContent = "©" + " " + Year + " " + Creator
     document.querySelector("#Re-Series").textContent = Series
     document.querySelector("#Re-Circulation").textContent = Circulation
+    // Use innerText because textContent cannot get 'enter'
     document.querySelector("#Re-Description").innerText = Description
     Get_Monster_Attribute()
     Get_Monster_Level()
@@ -183,6 +186,7 @@ function Generate() {
                 let test3 = load3
                 if (test == true && test2 == true && test3 == true) {
                     Gen_Button.disabled = false
+                    Save_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
@@ -200,6 +204,7 @@ function Generate() {
                 let test3 = load3
                 if (test == true && test3 == true) {
                     Gen_Button.disabled = false
+                    Save_Button.disabled = false
                     Gen_Button.textContent = 'Generate'
                     clearInterval(FullCheck)
                 }
