@@ -75,7 +75,6 @@ body {
     width: 80px;
 }
 #Blur-Div {
-    width: 100%; height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
@@ -189,6 +188,7 @@ hr {
 }
 #Re-Description {
     font-size: 12px;
+    margin-top: 0;
 }
 #Re-Description-CSS {
     position: absolute;
