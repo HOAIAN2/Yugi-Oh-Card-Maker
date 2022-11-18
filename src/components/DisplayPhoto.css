@@ -119,7 +119,9 @@
     display: flex;
     z-index: var(--high-index);
 }
-
+.display-photo>.atk-def.mobile {
+    top: 553px;
+}
 .display-photo>.atk-def>.atk,
 .def {
     width: 70px;

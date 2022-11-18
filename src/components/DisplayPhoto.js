@@ -5,6 +5,7 @@ function DisplayPhoto({ data }) {
     const nameNode = useRef()
     const desNode = useRef()
     const renderNode = useRef()
+    const atkDefNode = useRef()
     let description = []
     function handleRender() {
         console.log(renderNode)
@@ -82,6 +83,18 @@ function DisplayPhoto({ data }) {
             }
         }
     })
+    useEffect(() => {
+        function isMobile() {
+            let check = false;
+            if (navigator.userAgent.match(/Android/i)) check = true
+            if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) check = true
+            if (navigator.userAgent.match(/Opera Mini/i)) check = true
+            return check
+        }
+        if (isMobile()) {
+            atkDefNode.current.className = 'atk-def mobile'
+        }
+    }, [])
     const arr = createLevel(data.level || 0)
     function handleCreator() {
         if (data.year !== '' || data.creator !== '') return <span className='creator'>©{data.year} {data.creator}</span>
@@ -118,7 +131,7 @@ function DisplayPhoto({ data }) {
                     })}
                 </p>
             </div>
-            <div className='atk-def'>
+            <div ref={atkDefNode} className='atk-def'>
                 <div className='atk'>
                     <span>ATK /</span>
                     <span>{data.atk}</span>
