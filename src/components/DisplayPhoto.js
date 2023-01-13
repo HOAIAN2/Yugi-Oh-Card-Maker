@@ -1,14 +1,16 @@
 import html2canvas from 'html2canvas'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useContext, useState } from 'react'
+import Context from '../store/Context'
 import './DisplayPhoto.css'
-function DisplayPhoto({ data }) {
+function DisplayPhoto() {
+    const [data] = useContext(Context)
+    const [types, setType] = useState('')
     const nameNode = useRef()
     const desNode = useRef()
     const renderNode = useRef()
     const atkDefNode = useRef()
     let description = []
     function handleRender() {
-        console.log(renderNode)
         html2canvas(renderNode.current, { scale: 2 }).then((canvas) => {
             const dataURL = canvas.toDataURL()
             const a = document.createElement('a')
@@ -17,6 +19,12 @@ function DisplayPhoto({ data }) {
             a.click()
         })
     }
+    useEffect(() => {
+        if (data.types === '') setType(data.cardType)
+        else {
+            setType(`${data.types}/${data.cardType}`)
+        }
+    }, [data])
     function getDescription() {
         if (data.description) description = data.description.split('\n')
         return description
@@ -26,7 +34,7 @@ function DisplayPhoto({ data }) {
         else return './material/Normal_Mons.png'
     }
     function attributes() {
-        switch (data.attributes) {
+        switch (data.attribute) {
             case 'Light': return './material/Light.png'
             case 'Dark': return './material/Dark.png'
             case 'Fire': return './material/Fire.png'
@@ -46,7 +54,6 @@ function DisplayPhoto({ data }) {
     function autoResize(size) {
         return `${size}px`
     }
-    /// The fuck, set size số khác ăn bug nhảy ngay phát mounted đầu
     useEffect(() => {
         let nameSize = 34
         nameNode.current.style.fontSize = nameSize
@@ -121,7 +128,7 @@ function DisplayPhoto({ data }) {
             </div>
             <div className='type'>
                 <span>[</span>
-                <span id='type'>{data.type}</span>
+                <span id='type'>{types}</span>
                 <span>]</span>
             </div>
             <div className='des'>

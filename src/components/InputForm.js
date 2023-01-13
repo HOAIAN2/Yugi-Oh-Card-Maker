@@ -1,78 +1,49 @@
-import { useState, useEffect, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
+import Context from "../store/Context"
+import { ACTION } from "../store/reducer"
 import './InputForm.css'
-function InputForm({ getData }) {
-    const [name, setName] = useState('')
-    const [cardType, setCardType] = useState('Normal')
-    const [attributes, setAttributes] = useState('Light')
-    const [level, setLevel] = useState('1')
-    const [pic, setPic] = useState('')
-    const [circulation, setCirculation] = useState('')
-    const [id, setId] = useState('')
-    const [type, setType] = useState('')
-    const [description, setDescription] = useState('')
-    const [atk, setAtk] = useState('')
-    const [def, setDef] = useState('')
-    const [creator, setCreator] = useState('')
-    const [year, setYear] = useState('')
-    const [serialNumber, setSerialNumber] = useState('')
+function InputForm() {
+    const [data, dataDispatch] = useContext(Context)
     const yearNode = useRef()
     const serialNode = useRef()
-    function handleGenerate() {
-        const data = {
-            name,
-            cardType,
-            attributes,
-            level,
-            pic,
-            circulation,
-            id,
-            type,
-            description,
-            atk,
-            def,
-            creator,
-            year,
-            serialNumber
-        }
-        if (data.type === '') data.type = data.cardType
-        else {
-            data.type = `${data.type}/${data.cardType}`
-        }
-        getData(data)
-    }
-    useEffect(handleGenerate,
-        [getData, name, cardType, attributes, level, pic, circulation, id, type, description, atk, def, creator, year, serialNumber])
     function getPicURL(e) {
         const picURL = URL.createObjectURL(e.target.files[0])
-        setPic(picURL)
+        dataDispatch({ type: ACTION.CHANGE_PIC, payload: picURL })
     }
-    useEffect(() => {
-        return () => {
-            URL.revokeObjectURL(pic)
-        }
-    }, [pic])
     useEffect(() => {
         const date = new Date().getFullYear()
         yearNode.current.placeholder = date
         const random = Math.floor(Math.random() * (99999999 - 10000000 + 1)) + 10000000
         serialNode.current.placeholder = random
     }, [])
+    useEffect(() => {
+        return () => {
+            URL.revokeObjectURL(data.pic)
+        }
+    }, [data.pic])
     return (
         <div className='input-form'>
             <div>
                 <label>Name: </label>
-                <input value={name} onInput={(e) => { setName(e.target.value) }} placeholder="Monster name" />
+                <input
+                    value={data.name}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_NAME, payload: e.target.value }) }}
+                    placeholder="Monster name" />
             </div>
             <div>
                 <label>Card Type: </label>
-                <select value={cardType} onChange={(e) => { setCardType(e.target.value) }}>
+                <select
+                    value={data.cardType}
+                    onChange={(e) => { dataDispatch({ type: ACTION.CHANGE_CARD_TYPE, payload: e.target.value }) }}>
                     <option>Normal</option>
                     <option>Effects</option>
                 </select>
             </div>
             <div>
                 <label>Attribute: </label>
-                <select value={attributes} onChange={(e) => { setAttributes(e.target.value) }}>
+                <select
+                    value={data.attribute}
+                    onChange={(e) => { dataDispatch({ type: ACTION.CHANGE_ATTRIBUTE, payload: e.target.value }) }}>
                     <option>Light</option>
                     <option>Dark</option>
                     <option>Fire</option>
@@ -83,7 +54,9 @@ function InputForm({ getData }) {
             </div>
             <div>
                 <label>Level: </label>
-                <select value={level} onChange={(e) => { setLevel(e.target.value) }}>
+                <select
+                    value={data.level}
+                    onChange={(e) => { dataDispatch({ type: ACTION.CHANGE_LEVEL, payload: e.target.value }) }}>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -104,36 +77,67 @@ function InputForm({ getData }) {
             </div>
             <div>
                 <label>Circulation</label>
-                <input value={circulation} onInput={(e) => { setCirculation(e.target.value) }} placeholder="Limited edition" />
+                <input
+                    value={data.circulation}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_CIRCULATION, payload: e.target.value }) }}
+                    placeholder="Limited edition" />
             </div>
             <div>
                 <label>Set-ID: </label>
-                <input value={id} onInput={(e) => { setId(e.target.value) }} placeholder="KN-01" maxLength="5" />
+                <input
+                    value={data.id}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_ID, payload: e.target.value }) }}
+                    placeholder="KN-01"
+                    maxLength="5" />
             </div>
             <div>
                 <label>Type: </label>
-                <input value={type} onInput={(e) => { setType(e.target.value) }} placeholder="Dragon/Warrior" maxLength="20" />
+                <input
+                    value={data.types}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_TYPES, payload: e.target.value }) }}
+                    placeholder="Dragon/Warrior"
+                    maxLength="20" />
             </div>
             <div>
                 <label>Description: </label>
-                <textarea onInput={(e) => { setDescription(e.target.value) }} value={description}></textarea>
+                <textarea
+                    value={data.description}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_DESCRIPTION, payload: e.target.value }) }}>
+                </textarea>
             </div>
             <div className='ip-atk-def'>
                 <label>ATK / DEF: </label>
-                <input maxLength={4} onInput={(e) => { setAtk(e.target.value) }} value={atk} placeholder="3000" />
-                <input maxLength={4} onInput={(e) => { setDef(e.target.value) }} value={def} placeholder="2800" />
+                <input
+                    value={data.atk}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_ATK, payload: e.target.value }) }}
+                    maxLength={4}
+                    placeholder="3000" />
+                <input
+                    value={data.def}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_DEF, payload: e.target.value }) }}
+                    maxLength={4}
+                    placeholder="2800" />
             </div>
             <div>
                 <label>Creator: </label>
-                <input value={creator} onInput={(e) => { setCreator(e.target.value) }} placeholder="Your name" />
+                <input
+                    value={data.creator}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_CREATOR, payload: e.target.value }) }}
+                    placeholder="Your name" />
             </div>
             <div>
                 <label>Year: </label>
-                <input ref={yearNode} value={year} onInput={(e) => { setYear(e.target.value) }} />
+                <input
+                    ref={yearNode}
+                    value={data.year}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_YEAR, payload: e.target.value }) }} />
             </div>
             <div>
                 <label>Serial number: </label>
-                <input ref={serialNode} value={serialNumber} onInput={(e) => { setSerialNumber(e.target.value) }} />
+                <input
+                    ref={serialNode}
+                    value={data.serialNumber}
+                    onInput={(e) => { dataDispatch({ type: ACTION.CHANGE_SERIAL, payload: e.target.value }) }} />
             </div>
         </div>
     )
