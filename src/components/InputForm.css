@@ -11,6 +11,10 @@ textarea {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.input-form>div>label {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .input-form>div>textarea {
     height: 100px;
 }

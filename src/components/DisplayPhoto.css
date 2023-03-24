@@ -87,6 +87,7 @@
     top: 455px;
     left: 36px;
     z-index: var(--high-index);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .display-photo>.type>#type {
@@ -119,13 +120,16 @@
     display: flex;
     z-index: var(--high-index);
 }
+
 .display-photo>.atk-def.mobile {
     top: 553px;
 }
+
 .display-photo>.atk-def>.atk,
 .def {
     width: 70px;
 }
+
 .display-photo>.creator-series {
     position: absolute;
     top: 580px;
