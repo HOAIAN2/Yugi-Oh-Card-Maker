@@ -43,6 +43,7 @@ body::-webkit-scrollbar {
 }
 
 .input-form {
+  margin-top: 20px;
   width: 500px;
   height: fit-content;
   background-color: var(--background-dark);
@@ -52,6 +53,7 @@ body::-webkit-scrollbar {
 }
 
 .display-photo {
+  margin-top: 20px;
   width: 419px;
   height: 610px;
   position: relative;
@@ -60,6 +62,7 @@ body::-webkit-scrollbar {
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 500px) {
@@ -80,6 +83,7 @@ body::-webkit-scrollbar {
   }
 
   .display-photo {
+    margin-top: 10px;
     transform: scale(0.95);
   }
 }

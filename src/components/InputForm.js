@@ -2,11 +2,12 @@ import { useContext, useEffect, useRef } from "react"
 import Context from "../store/Context"
 import { ACTION } from "../store/reducer"
 import './InputForm.css'
-function InputForm() {
+function InputForm({ configs, setConfigs }) {
     const [data, dataDispatch] = useContext(Context)
     const yearNode = useRef()
     const serialNode = useRef()
     function getPicURL(e) {
+        if (!e.target.files[0]) return
         const picURL = URL.createObjectURL(e.target.files[0])
         dataDispatch({ type: ACTION.CHANGE_PIC, payload: picURL })
     }
@@ -74,6 +75,27 @@ function InputForm() {
             <div>
                 <label>Picture(1x1): </label>
                 <input type='file' accept='image/*' onChange={(e) => { getPicURL(e) }} />
+            </div>
+            <div className="configs">
+                <label>Config(x, y, scale): </label>
+                <input type='number'
+                    placeholder="50"
+                    onChange={(e) => {
+                        if (e.target.valueAsNumber === 0) return setConfigs({ ...configs, x: 0 })
+                        setConfigs({ ...configs, x: e.target.valueAsNumber || 50 })
+                    }} />
+                <input type='number'
+                    placeholder="112"
+                    onChange={(e) => {
+                        if (e.target.valueAsNumber === 0) return setConfigs({ ...configs, y: 0 })
+                        setConfigs({ ...configs, y: e.target.valueAsNumber || 112 })
+                    }} />
+                <input type='number'
+                    placeholder="1"
+                    min="0.1"
+                    onChange={(e) => {
+                        setConfigs({ ...configs, scale: e.target.valueAsNumber || 1 })
+                    }} />
             </div>
             <div>
                 <label>Circulation</label>

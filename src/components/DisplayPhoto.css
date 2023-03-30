@@ -47,11 +47,16 @@
     left: 50px;
     top: 112px;
     z-index: var(--low-index);
+    transition: 0.4s ease;
 }
 
 .display-photo>.pic>img {
     width: 319px;
-    height: 319px;
+    transition: 0.4s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .display-photo>.attribute {

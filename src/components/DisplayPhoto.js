@@ -2,7 +2,7 @@ import html2canvas from 'html2canvas'
 import { useEffect, useRef, useContext, useState } from 'react'
 import Context from '../store/Context'
 import './DisplayPhoto.css'
-function DisplayPhoto() {
+function DisplayPhoto({ configs }) {
     const [data] = useContext(Context)
     const [types, setType] = useState('')
     const nameNode = useRef()
@@ -108,7 +108,7 @@ function DisplayPhoto() {
         else return <span className='creator'></span>
     }
     return (
-        <div onClick={handleRender} ref={renderNode} className='display-photo' title='Click to Download'>
+        <div onDoubleClick={handleRender} ref={renderNode} className='display-photo' title='Click to Download'>
             <img className='main-card' src={cardType()} alt=''></img>
             <div className='name'>
                 <p ref={nameNode}>{data.name}</p>
@@ -119,8 +119,8 @@ function DisplayPhoto() {
                     return <img key={level} src='./material/Level.png' alt='' />
                 })}
             </div>
-            <div className='pic'>
-                <img src={data.pic || ''} alt='' />
+            <div className='pic' style={{ left: `${configs.x}px`, top: `${configs.y}px` }}>
+                <img src={data.pic || ''} alt='' style={{ width: `${319 * configs.scale}px` }} />
             </div>
             <div className='cir-id'>
                 <span>{data.circulation}</span>
