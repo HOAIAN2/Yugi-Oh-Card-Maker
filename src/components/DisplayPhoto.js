@@ -108,7 +108,7 @@ function DisplayPhoto({ configs }) {
         else return <span className='creator'></span>
     }
     return (
-        <div onDoubleClick={handleRender} ref={renderNode} className='display-photo' title='Click to Download'>
+        <div onClick={handleRender} ref={renderNode} className='display-photo' title='Click to Download'>
             <img className='main-card' src={cardType()} alt=''></img>
             <div className='name'>
                 <p ref={nameNode}>{data.name}</p>
